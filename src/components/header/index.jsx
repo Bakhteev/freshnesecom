@@ -1,10 +1,13 @@
-import React from 'react';
+import React from 'react'
+import HeaderTop from './headerTop';
 
-function Header() {
+const Header = () => {
     return (
-        <div>
-            
-        </div>
+        <header className="header">
+            <div className="container">
+                <HeaderTop />
+            </div>
+        </header>
     )
 }
 

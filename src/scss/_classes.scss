@@ -1,6 +1,7 @@
 .container{
     max-width: vw(1260);
     margin: 0 auto;
+    background: $white;
 }
 .row{
     display: flex;
@@ -18,5 +19,12 @@
 .col-3{
     width: 25%;
 }
-
+.link{
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: vw(12);
+    line-height: vw(16);
+    color: $green;
+}
 

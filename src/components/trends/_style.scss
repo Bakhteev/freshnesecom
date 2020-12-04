@@ -1,0 +1,99 @@
+.trends{
+    &__row{
+        padding: vw(102) 0 vw(66) 0;
+    }
+    &__sidebar{
+        box-sizing: border-box;
+    }
+    &__item{
+        background: url(../../assets/trends/bc.png) no-repeat center;
+        background-size: cover;
+        box-sizing: border-box;
+        padding: vw(48) 0 vw(32) vw(33);
+        min-width: vw(420);
+        margin-right: vw(32);
+        border-radius: vw(12);
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &__suptitle{
+        font-weight: 600;
+        font-size: vw(12);
+        line-height: vw(18);
+        color: $green;
+    }
+    &__title{
+        font-weight: 600;
+        font-size: vw(22);
+        line-height: vw(33);
+        margin: vw(10) 0 vw(94) 0;
+    }
+    &__btn{
+        font-weight: bold;
+        font-size: vw(15);
+        line-height: vw(22);
+        padding: vw(12) vw(38) vw(12) vw(16);
+        background: transparent;
+        border: vw(2) solid $light-green;
+        box-sizing: border-box;
+        border-radius: vw(12);
+        position: relative;
+        transition: 0.3s;
+        &::before{
+            position: absolute;
+            content: "";
+            top: 50%;
+            right: vw(22);
+            width: vw(4);
+            height: vw(4);
+            border: vw(2) solid $green;
+            border-top: none;
+            border-left: none;
+            transform: translateY(-14%) rotate(-45deg);
+            transition: 0.3s;
+        }
+        &:hover{
+            background: $light-green;
+            &::before{
+                border-color: $black;
+            }
+        }
+    }
+
+}
+.sidebar{
+    padding-left: vw(45);
+    &__title{
+        font-weight: 600;
+        font-size: vw(18);
+        line-height: vw(27);
+        margin-bottom: vw(18);
+    }
+    &__btn{
+        margin-top: vw(48);
+        position: relative;
+        padding: vw(12) vw(38) vw(12) vw(16);
+        box-sizing: border-box;
+        border-radius: vw(12);
+        font-weight: bold;
+        font-size: vw(15);
+        line-height: vw(22);
+        transition: 0.3s;
+        &::before{
+            position: absolute;
+            content: "";
+            top: 50%;
+            right: vw(22);
+            width: vw(4);
+            height: vw(4);
+            border: vw(2) solid $black;
+            border-top: none;
+            border-left: none;
+            transform: translateY(-14%) rotate(-45deg);
+        }
+        &:hover{
+            background: $light-green;
+        }
+    }
+}

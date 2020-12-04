@@ -1,6 +1,6 @@
-export const menuText =[
+export const menuText = [
     {
-        title: 'Bakery' ,
+        title: 'Bakery',
         item: 'Bakery'
     },
     {

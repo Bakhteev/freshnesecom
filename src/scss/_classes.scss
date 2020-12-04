@@ -10,8 +10,14 @@
 .flex{
     display: flex;
 }
+.col-9{
+    width: 75%;
+}
 .col-6{
     width: 50%;
+}
+.col-5{
+    width: 41.66%;
 }
 .col-4{
     width: 33.33%;
@@ -26,5 +32,6 @@
     font-size: vw(12);
     line-height: vw(16);
     color: $green;
+    text-decoration: underline;
 }
 

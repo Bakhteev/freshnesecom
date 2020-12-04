@@ -12,7 +12,7 @@ const HeaderTop = () => {
                         <a href="tel:+420 336 775 664" className="header__link header__link--black link">+420 336 775 664</a>
                     </li>
                     <li className="header__item">
-                        <a href="memail:info@freshnesecom.com" className="header__link header__link--black link">info@freshnesecom.com</a>
+                        <a href="email:info@freshnesecom.com" className="header__link header__link--black link">info@freshnesecom.com</a>
                     </li>
                 </ul>
             </div>

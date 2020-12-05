@@ -8,6 +8,7 @@ const Products = () => {
                 <div className="products__row row">
                     <Items />
                 </div>
+                    <Items />
             </div>
         </section>
     )

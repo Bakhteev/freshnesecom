@@ -1,21 +1,12 @@
 import React from 'react'
+import Sidebar from '../sidebar'
 
 const Trends = () => {
     return (
         <section className="trends">
             <div className="container">
                 <div className="trends__row row">
-                    <aside className="col-3 trends__sidebar sidebar">
-                        <h2 className="sidebar__title">Category menu</h2>
-                        <ul className="sidebar__menu">
-                            <li className="sidebar__item"><a href="#" className="link">Bakery</a></li>
-                            <li className="sidebar__item"><a href="#" className="link">Fruit and vegetables</a></li>
-                            <li className="sidebar__item"><a href="#" className="link">Meat and fish</a></li>
-                            <li className="sidebar__item"><a href="#" className="link">Drinks</a></li>
-                            <li className="sidebar__item"><a href="#" className="link">Kitchen</a></li>
-                        </ul>
-                        <button className="sidebar__btn">More categories</button>
-                    </aside>
+                    {/* <Sidebar /> */}
                     <div className="col-9 row">
                         <div className="col-5 trends__item">
                             <h3 className="trends__suptitle">Banner subfocus</h3>

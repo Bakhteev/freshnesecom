@@ -1,0 +1,36 @@
+.sidebar{
+    box-sizing: border-box;
+    padding-left: vw(45);
+    &__title{
+        font-weight: 600;
+        font-size: vw(18);
+        line-height: vw(27);
+        margin-bottom: vw(18);
+    }
+    &__btn{
+        margin-top: vw(48);
+        position: relative;
+        padding: vw(12) vw(38) vw(12) vw(16);
+        box-sizing: border-box;
+        border-radius: vw(12);
+        font-weight: bold;
+        font-size: vw(15);
+        line-height: vw(22);
+        transition: 0.3s;
+        &::before{
+            position: absolute;
+            content: "";
+            top: 50%;
+            right: vw(22);
+            width: vw(4);
+            height: vw(4);
+            border: vw(2) solid $black;
+            border-top: none;
+            border-left: none;
+            transform: translateY(-14%) rotate(-45deg);
+        }
+        &:hover{
+            background: $light-green;
+        }
+    }
+}

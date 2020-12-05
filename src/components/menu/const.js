@@ -32,3 +32,5 @@ export const menuText = [
         item: 'Pharmacy'
     }
 ]
+
+console.log(menuText.title)

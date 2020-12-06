@@ -3,7 +3,7 @@ export const itemContent = [
         discount: 36,
         img: '',
         title: 'Product Title',
-        description: 'Space for a small product description ',
+        description: 'Space for a small product description',
         price: 20 - (20 / 100 * 36),
         prevPrice: 20,
     },

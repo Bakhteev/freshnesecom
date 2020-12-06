@@ -2,7 +2,6 @@ import React from 'react'
 
 
 const Sidebar = ({ title, item, link }) => {
-    console.log(item)
     return (
         <div className="col-3">
             <aside className="sidebar" >

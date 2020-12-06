@@ -6,7 +6,10 @@ const Trends = () => {
         <section className="trends">
             <div className="container">
                 <div className="trends__row row">
-                    {/* <Sidebar /> */}
+                    <Sidebar
+                        title='Category menu'
+                        item={['Bakery', 'Fruit and vegetables', 'Meat and fish', 'Drinks', 'Kitchen']}
+                        link='#' />
                     <div className="col-9 row">
                         <div className="col-5 trends__item">
                             <h3 className="trends__suptitle">Banner subfocus</h3>

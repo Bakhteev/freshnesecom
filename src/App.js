@@ -5,6 +5,7 @@ import Menu from './components/menu';
 import Trends from './components/trends';
 import Products from "./components/products";
 import Comments from "./components/slider";
+import Headline from "./components/headline";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Trends />
       <Products />
       <Comments />
+      <Headline />
     </div>
   );
 }

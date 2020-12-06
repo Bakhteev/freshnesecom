@@ -4,10 +4,10 @@ import classNames from 'classnames';
 
 const Items = () => {
     return (
-        <div className="col-9 row">
+        <div className="row">
             {itemContent.map((item) => {
                 return (
-                    <div className="col-4 products__item item">
+                    <div className="products__item item">
                         <div className="item__content">
                             <span className={classNames("item__discount",{
                                 '': item.discount === 0,

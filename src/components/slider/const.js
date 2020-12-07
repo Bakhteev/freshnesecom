@@ -1,7 +1,7 @@
-import slider1 from '../../assets/comments/slider 1.png'
-import slider2 from '../../assets/comments/slider 2.png'
-import slider3 from '../../assets/comments/slider 3.png'
-import slider4 from '../../assets/comments/slider 4.png'
+import slider1 from '../../assets/comments/slider1.png'
+import slider2 from '../../assets/comments/slider2.png'
+import slider3 from '../../assets/comments/slider3.png'
+import slider4 from '../../assets/comments/slider4.png'
 
 
 export const sliderContent = [

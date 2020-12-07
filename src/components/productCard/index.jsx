@@ -2,7 +2,6 @@ import React from 'react'
 import classNames from 'classnames';
 
 const ProductCard = (props) => {
-    console.log(props)
     return (
         <div className="row">
             <div className="products__item item">

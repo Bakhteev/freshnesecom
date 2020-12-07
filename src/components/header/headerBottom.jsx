@@ -1,6 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
+import classNames from 'classnames';
 
 const HeaderBottom = () => {
+    const [categoties, setCategoties] = useState(false)
+
+    const handleCategoriesClick = () =>{
+        categoties === false ? setCategoties(true) : setCategoties(false)
+    }
     return (
         <div className="header__bottom flex">
             <div className="header__logo logo">
@@ -22,7 +28,13 @@ const HeaderBottom = () => {
                 </a>
             </div>
             <div className="header__search flex">
-                <ul className="header__categoties categories">
+                <ul 
+                onClick={() => handleCategoriesClick()}
+                    className={classNames("header__categoties categories", {
+                        'active': categoties === true,
+                        '' :categoties === false
+                    })}
+                >
                     <li className="categoties__item">
                         All categories
                     </li>

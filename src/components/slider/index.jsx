@@ -9,7 +9,7 @@ const Comments = () => {
             <div className="container">
                 <div className="comments__content">
                     <div className="padding45">
-                        <SectionHeader title="Our customers says" />
+                        <SectionHeader title="Our customers says" btn="Button" />
                     </div>
                     <Card />
                 </div>

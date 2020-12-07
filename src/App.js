@@ -6,6 +6,7 @@ import Trends from './components/trends';
 import Products from "./components/products";
 import Comments from "./components/slider";
 import Headline from "./components/headline";
+import Blog from "./components/blog";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Products />
       <Comments />
       <Headline />
+      <Blog />
     </div>
   );
 }

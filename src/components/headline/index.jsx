@@ -7,7 +7,7 @@ const Headline = () => {
         <section className="headline">
             <div className="container">
                 <div className="headline__content">
-                    <SectionHeader title="Section Headline"/>
+                    <SectionHeader title="Section Headline" btn="Button"/>
                     <div className="headline__row row">
                         <ProductCard
                          discount={[36, 1, 24, 0]}

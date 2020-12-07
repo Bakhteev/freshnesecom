@@ -5,6 +5,10 @@ import blogImg3 from '../../assets/blog/blog-3.png'
 import blogImg4 from '../../assets/blog/blog-4.png'
 import blogImg5 from '../../assets/blog/blog-5.png'
 import SectionHeader from '../section-header';
+import ItemSalat from './blogItemSalat'
+import { salatArr } from './const';
+import {authorArr} from './const';
+import BlogAutor from './blogItemSalat';
 
 const Blog = () => {
     return (
@@ -16,11 +20,7 @@ const Blog = () => {
                         <div className="col-5 blog__item blog__item--big blog-item">
                             <span className="blog__tag">Dinner tips</span>
                             <h2 className="blog__title blog__title--light">Our chef tips for a great and tasty dinner ready in 20 minutes</h2>
-                            <div className="blog-item__row flex">
-                                <img src={blogIcon} alt="" className="blog__icon" />
-                                <span className="blog__author">Author</span>
-                                <span className="blog__date">17. 6. 2020</span>
-                            </div>
+                            <BlogAutor {...authorArr} />
                         </div>
                         <div className="col-3 blog__item blog-item">
                             <img src={blogImg} alt="" className="blog__img blog__img--big" />
@@ -32,27 +32,8 @@ const Blog = () => {
                             </div>
                         </div>
                         <div className="col-3 blog__item blog-item">
-                            <div  className="blog-item__inner">
-                                <p className="blog__description">Salat is kinda good start to your morning routines</p>
-                                <div className="blog-item__row flex">
-                                    <span className="blog__author">Author</span>
-                                    <span className="blog__date">14.1.2020</span>
-                                </div>
-                            </div>
-                            <div  className="blog-item__inner">
-                                <p className="blog__description">Our chef tips for a great and healthy breakfast</p>
-                                <div className="blog-item__row flex">
-                                    <span className="blog__author">Author</span>
-                                    <span className="blog__date">14.1.2020</span>
-                                </div>
-                            </div >
-                            <div className="blog-item__inner">
-                                <p className="blog__description">Prepare a simple and delicious breads</p>
-                                <div className="blog-item__row flex">
-                                    <span className="blog__author">Author</span>
-                                    <span className="blog__date">14.1.2020</span>
-                                </div>
-                            </div>
+                            {salatArr.map(item => <ItemSalat {...item} />
+                            )}
                         </div>
                         <div className="col-1 blog__item">
                             <img src={blogImg3} alt="" className="blog__img" />

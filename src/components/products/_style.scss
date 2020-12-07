@@ -1,7 +1,14 @@
 .products{
-    &__row{
+    &__content{
         padding: vw(64) vw(45) vw(73) vw(45);
-        margin: 0 vw(-16);
+    }
+    &__row{
+        &--top{
+            padding-bottom: vw(73);
+        }
+        &--bottom{
+            padding: vw(64) 0 vw(73) 0;
+        }
     }
     &__item{
         box-sizing: border-box;

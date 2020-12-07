@@ -1,8 +1,10 @@
+import blogIcon from '../../assets/comments/slider2.png'
 export const authorArr = [
     {
         boolean: true,
         author: 'Author',
-        date: '17. 6. 2020'
+        date: '17. 6. 2020',
+        img: blogIcon ,
     },
     {
         boolean: false,

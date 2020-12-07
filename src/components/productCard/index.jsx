@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
 
 const ProductCard = ({ img, discount, title, description, price }) => {
   // const [currentPrice, setPrice] = React.useState(price);

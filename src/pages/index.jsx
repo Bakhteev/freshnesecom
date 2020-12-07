@@ -1,16 +1,18 @@
 import React from 'react'
 import Trends from '../components/trends'
-import Sidebar from "../components/sidebar";
-import {sidebarObj} from '../components/sidebar/const';
+import Products from "../components/products";
+import Comments from "../components/slider";
+import Headline from "../components/headline";
+import Blog from "../components/blog";
 
 const Home = () => {
     return (
-        <div>
-            {sidebarObj.map(item =>{
-            return (
-                <Sidebar {...item} key={item.title} /> 
-            )
-            })}
+        <div className="home">
+            <Trends />
+            <Products />
+            <Comments />
+            <Headline />
+            <Blog />
         </div>
         
     )

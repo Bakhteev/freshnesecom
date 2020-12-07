@@ -13,7 +13,6 @@ const Comments = () => {
                     </div>
                     <Card />
                 </div>
-
             </div>
         </section >
 

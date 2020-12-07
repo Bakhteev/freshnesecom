@@ -1,7 +1,6 @@
 import React from 'react'
 
 const FooterItem = ({ title, link, text }) => {
-    console.log(title)
     return (
         <div className="col-3 footer__column">
             <h3 className="footer__title">{title}</h3>

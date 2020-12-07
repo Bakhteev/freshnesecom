@@ -18,11 +18,8 @@ const Card = () => {
                 initialSlide={1}
                 loop={true}
                 navigation
-                onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log('slide change')}
             >
                 {sliderContent.map(item => {
-
                     return (
                         < SwiperSlide>
                             <div className="col-3 slider__item">

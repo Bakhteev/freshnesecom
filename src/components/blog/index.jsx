@@ -1,5 +1,4 @@
 import React from 'react'
-import blogIcon from '../../assets/comments/slider2.png'
 import blogImg from '../../assets/blog/blog-2.png'
 import blogImg3 from '../../assets/blog/blog-3.png'
 import blogImg4 from '../../assets/blog/blog-4.png'

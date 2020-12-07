@@ -5,7 +5,7 @@ const HeaderBottom = () => {
     const [categoties, setCategoties] = useState(false)
 
     const handleCategoriesClick = () =>{
-        categoties === false ? setCategoties(true) : setCategoties(false)
+        setCategoties(categoties ? false : true)
     }
     return (
         <div className="header__bottom flex">

@@ -7,6 +7,7 @@ import Products from "./components/products";
 import Comments from "./components/slider";
 import Headline from "./components/headline";
 import Blog from "./components/blog";
+import Footer from "./components/footer";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Comments />
       <Headline />
       <Blog />
+      <Footer />
     </div>
   );
 }

@@ -16,7 +16,6 @@ const Sidebar = ({ title, item, link }) => {
                     </li>
                     )
                 })}
-                   
                 </ul>
                 <button className="sidebar__btn">More categories</button>
             </aside>

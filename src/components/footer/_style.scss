@@ -1,0 +1,30 @@
+.footer{
+    &__top{
+        padding: vw(64) vw(45) vw(48) vw(45);
+    }
+    &__bottom{
+        padding: 0 vw(45) vw(48) vw(45);
+    }
+    &__title{
+        margin-bottom: vw(16);
+        font-weight: 600;
+        font-size: vw(18);
+        line-height: vw(27);
+    }
+    &__item{
+        margin-bottom: vw(16);
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__link{
+        background: $light-gray;
+        border-radius: vw(12);
+        padding: vw(4) vw(10);
+        font-weight: 600;
+        font-size: vw(12);
+        line-height: vw(18);
+        color: $black;
+        margin: 0 vw(16) vw(16) 0;
+    }
+}

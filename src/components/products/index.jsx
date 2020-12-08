@@ -9,27 +9,27 @@ const Products = () => {
       <div className='container'>
         <div className="products__content">
           <div className='products__row--top row'>
-            <Sidebar
-              title='Best selling products'
-              item={['Kitchen', 'Meat and fish', 'Special nutrition', 'Pharmacy', 'Baby']}
-              link='#'
-            />
-            <div className='col-9'>
-              <div className='row'>
-                {itemContent.map((item, index) => (index < 3 ? <ProductCard {...item} /> : ''))}
-              </div>
+            <div className="col-3">
+              <Sidebar
+                title='Best selling products'
+                item={['Kitchen', 'Meat and fish', 'Special nutrition', 'Pharmacy', 'Baby']}
+                link='#'
+              />
+            </div>
+            <div className='col-9 products__items row'>
+              {itemContent.map((item, index) => (index < 3 ? <ProductCard {...item} /> : ''))}
             </div>
           </div>
           <div className='products__row--bottom row'>
-            <Sidebar
-              title='Best from Farmers'
-              item={['Carrots', 'Tomatoes', 'Potatoes', 'Chicken', 'Pork']}
-              link='#'
-            />
-            <div className='col-9'>
-              <div className='row'>
-                {itemContent.map((item, index) => (index < 3 ? <ProductCard {...item} /> : ''))}
-              </div>
+            <div className="col-3">
+              <Sidebar
+                title='Best from Farmers'
+                item={['Carrots', 'Tomatoes', 'Potatoes', 'Chicken', 'Pork']}
+                link='#'
+              />
+            </div>
+            <div className='col-9 products__items row'>
+              {itemContent.map((item, index) => (index < 3 ? <ProductCard {...item} /> : ''))}
             </div>
           </div>
         </div>

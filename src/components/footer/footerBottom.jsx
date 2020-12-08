@@ -11,7 +11,6 @@ const FooterBottom = () => {
                         <a href={item.link} className="footer__link">{item.text}</a>
                     )
                 })}
-
             </div>
         </div>
     )

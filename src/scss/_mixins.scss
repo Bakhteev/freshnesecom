@@ -3,3 +3,8 @@
 	justify-content: $justify-value;
 	align-items: $align-value;
 }
+@mixin mobile($screen-width) {
+	@media screen and (max-width: $screen-width) {
+		@content;
+	}
+}

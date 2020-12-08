@@ -19,7 +19,7 @@ const Blog = () => {
                         <div className="col-5 blog__item blog__item--big blog-item">
                             <span className="blog__tag">Dinner tips</span>
                             <h2 className="blog__title blog__title--light">Our chef tips for a great and tasty dinner ready in 20 minutes</h2>
-                            <BlogAutor {...authorArr} />
+                            {authorArr.map((item, index) => (index < 1 ? <BlogAutor {...item} />: ''))}
                         </div>
                         <div className="col-3 blog__item blog-item">
                             <img src={blogImg} alt="" className="blog__img blog__img--big" />

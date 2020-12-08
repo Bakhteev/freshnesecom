@@ -2,6 +2,9 @@
     max-width: vw(1260);
     margin: 0 auto;
     background: $white;
+    @include mobile(578px){
+        max-width: 100%;
+    }
 }
 .row{
     display: flex;
@@ -39,5 +42,31 @@
     line-height: vw(16);
     color: $green;
     text-decoration: underline;
+    @include mobile(578px){
+        font-size: vmin(12);
+        line-height: vmin(16);
+    }
 }
-
+@include mobile(578px){
+    .col-9{
+        width: 100%;
+    }
+    .col-6{
+        width: 100%;
+    }
+    // .col-5{
+    //     width: 100%;
+    // }
+    .col-4{
+        width: 100%;
+    }
+    // .col-3{
+    //     width: 100%;
+    // }
+    .col-2 {
+        width: 100%;
+    }
+    .col-1{
+        width: 100%;
+    }
+}

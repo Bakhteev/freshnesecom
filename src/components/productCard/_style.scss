@@ -1,8 +1,11 @@
 .item{
     margin-right: vw(32);
-    width: vw(268);
+    // min-width: vw(268);
     &:last-child{
         margin-right: 0;
+    }
+    @include mobile(578px){
+        margin-bottom: vmin(20);
     }
     &__content{
         position: relative;
@@ -10,6 +13,11 @@
         padding: vw(16);
         border: vw(1) solid #d1d1d1;
         border-radius: vw(12);
+        @include mobile(578px){
+            padding: vmin(16);
+            border: vmin(1) solid #d1d1d1;
+            border-radius: vmin(12);
+        }
     }
     &__discount{
         display: none;
@@ -27,18 +35,36 @@
         &.active{
             display: inline;
         }
+        @include mobile(578px){
+            padding: 0 vmin(8);
+            border-radius: vmin(12);
+            top: vmin(28);
+            left: vmin(35);
+            font-size: vmin(12);
+            line-height: vmin(18);
+        }
     }
     &__img{
         background: $dark-gray;
         border-radius: vw(12);
         min-width: 100%;
         height: vw(180);
+        @include mobile(578px){
+            border-radius: vmin(12);
+            min-width: 100%;
+            height: vmin(180);
+        }
     }
     &__title{
         margin-top: vw(16);
         font-weight: 500;
         font-size: vw(15);
         line-height: vw(22);
+        @include mobile(578px){
+            margin-top: vmin(16);
+            font-size: vmin(15);
+            line-height: vmin(22);
+        }
     }
     &__description{
         margin: vw(4) 0 vw(16) 0;
@@ -47,7 +73,12 @@
         font-weight: normal;
         font-size: vw(12);
         line-height: vw(16);
-        color: #575757
+        color: #575757;
+        @include mobile(578px){
+            margin: vmin(4) 0 vmin(16) 0;
+            font-size: vmin(12);
+            line-height: vmin(16);
+        }
     }
     &__row{
         align-items: center;
@@ -60,6 +91,10 @@
         font-weight: 600;
         font-size: vw(18);
         line-height: vw(27);
+        @include mobile(578px){
+            font-size: vmin(18);
+            line-height: vmin(27);
+        }
     }
     &__btn{
         font-weight: bold;
@@ -75,6 +110,13 @@
         &:hover{
             background: $green;
         }
+        @include mobile(578px){
+            font-size: vmin(15);
+            line-height: vmin(22);
+            padding: vmin(7) vmin(12);
+            border:vmin(2) solid #46760A;
+            border-radius: vmin(12);
+        }
     }
     &__prev-price{
         display: none;
@@ -85,6 +127,10 @@
         color:#a9a9a9 ;
         &.active{
             display: inline;
+        }
+        @include mobile(578px){
+            font-size: vmin(12);
+            line-height: vmin(18);
         }
     }
 }

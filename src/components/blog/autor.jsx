@@ -1,6 +1,7 @@
 import React from 'react'
 
 const BlogAutor = ({ boolean, img, author, date }) => {
+    console.log(boolean)
     if (boolean) {
         return (
             <div className="blog-item__row flex">

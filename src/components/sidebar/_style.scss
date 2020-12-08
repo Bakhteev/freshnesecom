@@ -1,5 +1,8 @@
 .sidebar{
     box-sizing: border-box;
+    @include mobile(578px){
+        display: none;
+    }
     &__title{
         font-weight: 600;
         font-size: vw(18);

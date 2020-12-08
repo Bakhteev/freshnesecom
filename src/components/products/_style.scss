@@ -5,102 +5,23 @@
     &__row{
         &--top{
             padding-bottom: vw(73);
+            @include mobile(578px){
+                padding-bottom: vmin(73);
+            }
         }
         &--bottom{
             padding: vw(64) 0 vw(73) 0;
+            @include mobile(578px){
+                padding: vmin(64) 0 vmin(73) 0;
+            }
+        }
+    }
+    &__items{
+        @include mobile(578px){
+            justify-content: center;
         }
     }
     &__item{
         box-sizing: border-box;
-    }
-}
-.item{
-    margin-right: vw(32);
-    width: vw(268);
-    &:last-child{
-        margin-right: 0;
-    }
-    &__content{
-        position: relative;
-        box-sizing: border-box;
-        padding: vw(16);
-        border: vw(1) solid #d1d1d1;
-        border-radius: vw(12);
-    }
-    &__discount{
-        display: none;
-        padding: 0 vw(8);
-        background: #F4F8EC;
-        border-radius: vw(12);
-        position: absolute;
-        top: vw(28);
-        left: vw(35);
-        z-index: 3;
-        font-weight: 600;
-        font-size: vw(12);
-        line-height: vw(18);
-        color: $green;
-        &.active{
-            display: inline;
-        }
-    }
-    &__img{
-        background: $dark-gray;
-        border-radius: vw(12);
-        min-width: 100%;
-        height: vw(180);
-    }
-    &__title{
-        margin-top: vw(16);
-        font-weight: 500;
-        font-size: vw(15);
-        line-height: vw(22);
-    }
-    &__description{
-        margin: vw(4) 0 vw(16) 0;
-        font-family: "Open Sans", sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: vw(12);
-        line-height: vw(16);
-        color: #575757
-    }
-    &__row{
-        align-items: center;
-        justify-content: space-between;
-    }
-    &__column{
-        flex-direction: column;
-    }
-    &__price{
-        font-weight: 600;
-        font-size: vw(18);
-        line-height: vw(27);
-    }
-    &__btn{
-        font-weight: bold;
-        font-size: vw(15);
-        line-height: vw(22);
-        background: $light-green;
-        padding: vw(7) vw(12);
-        border:vw(2) solid #46760A;
-        box-sizing: border-box;
-        border-radius: vw(12);
-        color:$white;
-        transition: 0.3s;
-        &:hover{
-            background: $green;
-        }
-    }
-    &__prev-price{
-        display: none;
-        font-weight: 600;
-        font-size: vw(12);
-        line-height: vw(18);
-        text-decoration-line: line-through;
-        color:#a9a9a9 ;
-        &.active{
-            display: inline;
-        }
     }
 }

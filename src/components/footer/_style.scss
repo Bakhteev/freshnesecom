@@ -26,5 +26,10 @@
         line-height: vw(18);
         color: $black;
         margin: 0 vw(16) vw(16) 0;
+        transition: 0.5s;
+        &:hover{
+            background: $green;
+            color: $light-gray;
+        }
     }
 }

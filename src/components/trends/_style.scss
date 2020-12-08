@@ -1,6 +1,14 @@
 .trends{
     &__row{
         padding: vw(102) vw(45) vw(66) vw(45);
+        @include mobile(578px){
+            padding: vmin(102) vmin(45) vmin(66) vmin(45);
+        }
+    }
+    &__items{
+        @include mobile(578px){
+            justify-content: center;
+        }
     }
     &__item{
         background: url(../../assets/trends/bc.png) no-repeat center;
@@ -19,6 +27,10 @@
         font-size: vw(12);
         line-height: vw(18);
         color: $green;
+        @include mobile(578px){
+            font-size: vmin(12);
+            line-height: vmin(18);
+        }
     }
     &__title{
         font-weight: 600;

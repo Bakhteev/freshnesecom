@@ -1,16 +1,26 @@
 .header{
     &__content{
         padding: vw(16) vw(45) vw(56) vw(45);
+        @include mobile(578px){
+            padding: vmin(16) vmin(45) vmin(56) vmin(45);
+        }
     }
     &__top{
         justify-content: space-between;
         padding-bottom: vw(16);
         border-bottom: vw(1) solid rgba($color: $black, $alpha: 0.05);
+        @include mobile(578px){
+            padding-bottom: vmin(16);
+            border-bottom: vmin(1) solid rgba($color: $black, $alpha: 0.05);
+        }
     }
     &__item{
         margin-right: vw(33);
         &:last-child{
             margin-right: 0;
+        }
+        @include mobile(578px){
+            margin-right: vmin(33);
         }
     }
     &__link{
@@ -25,17 +35,27 @@
             &:last-child{
                 margin-right: 0;
             }
+            @include mobile(578px){
+                margin-right: vmin(38);
+            }
         }
     }
     &__bottom{
         padding-top: vw(40);
         justify-content: space-between;
         align-items: center;
+        @include mobile(578px){
+            padding-top: vmin(40);
+        }
     }
     .logo{
         &__img{
             width:vw(177);
             height:vw(18);
+            @include mobile(578px){
+                width:vmin(177);
+                height:vmin(18);
+            }
         }
     }
     &__search{
@@ -46,6 +66,12 @@
         border: vw(1) solid #D1D1D1;
         box-sizing: border-box;
         border-radius: vw(12);
+        @include mobile(578px){
+            min-width: vmin(500);
+            padding: vmin(12) vmin(16);
+            border: vmin(1) solid #D1D1D1;
+            border-radius: vmin(12);
+        }
     }
     &__categoties{
         margin-right: vw(72);
@@ -55,13 +81,22 @@
             position: absolute;
             content: "";
             top: 35%;
-            right: -19px;
+            right: vw(-19);
             width: vw(5);
             height: vw(5);
             border: vw(2) solid $green;
             border-top: none;
             border-left: none;
             transform: rotate(45deg);
+        }
+        @include mobile(578px){
+            margin-right: vw(72);
+            &::before{
+                right: vmin(-19);
+                width: vmin(5);
+                height: vmin(5);
+                border: vmin(2) solid $green;
+            }
         }
     }
     &__label{
@@ -73,9 +108,12 @@
             position: absolute;
             content: "";
         }
+        @include mobile(578px){
+            max-height: vmin(19);
+        }
     }
     &__input{
-        width: vw(262);
+        min-width: vw(262);
         background-color: transparent;
         &::placeholder{
             font-family: "Open Sans", sans-serif;
@@ -84,12 +122,23 @@
             line-height: vw(19);
             color: #A9A9A9
         }
+        @include mobile(578px){
+            min-width: vmin(262);
+            &::placeholder{
+                font-size: vmin(14);
+                line-height: vmin(19);
+            }
+        }
     }
     &__icon{
         width: vw(24);
         height: vw(24);
         transition: 0.3s;
         stroke: $black;
+        @include mobile(578px){
+            width: vmin(24);
+            height: vmin(24);
+        }
     }
 }
 .categoties{
@@ -97,12 +146,20 @@
         font-weight: bold;
         font-size: vw(15);
         line-height: vw(22);
+        @include mobile(578px){
+            font-size: vmin(15);
+            line-height: vmin(22);
+        }
     }
 }
 .label{
     &__icon{
         width: vw(16);
         height: vw(16);
+        @include mobile(578px){
+            width: vmin(16);
+            height: vmin(16);
+        }
     }
 }
 .user{
@@ -128,6 +185,18 @@
             font-size: vw(12);
             line-height: vw(18);
             color: $white;
+            }
+        }
+        @include mobile(578px){
+            margin-right: vmin(42);
+            &:last-child{
+                &::before{
+                    bottom: vmin(-8);
+                    left: vmin(-13);
+                    padding: vmin(4) vmin(8);
+                    font-size: vmin(12);
+                    line-height: vmin(18);
+                }
             }
         }
     }

@@ -10,7 +10,7 @@ const ProductCard = ({ img, discount, title, description, price }) => {
   // };<input type='text' onChange={texthandler} placeholder='Напиши что - нибудь' />
 
   return (
-    <div className='products__item item'>
+    <div className=' products__item item'>
       
       <div className='item__content'>
         <span className={`item__discount ${discount !== 0 ? 'active' : ''}`}>- {discount} %</span>

@@ -8,7 +8,7 @@ const HeaderBottom = () => {
         setCategoties(categoties ? false : true)
     }
     return (
-        <div className="header__bottom flex">
+        <div className="header__bottom row">
             <div className="header__logo logo">
                 <a href="#" className="logo__link">
                     <svg className="logo__img" width="177" height="18" viewBox="0 0 177 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,10 +30,7 @@ const HeaderBottom = () => {
             <div className="header__search flex">
                 <ul 
                 onClick={() => handleCategoriesClick()}
-                    className={classNames("header__categoties categories", {
-                        'active': categoties === true,
-                        '' :categoties === false
-                    })}
+                    className={`header__categoties categories ${categoties === true ? 'active' : ''} `}
                 >
                     <li className="categoties__item">
                         All categories

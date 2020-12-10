@@ -74,30 +74,7 @@
         }
     }
     &__categoties{
-        margin-right: vw(72);
-        cursor: pointer;
-        position: relative;
-        &::before{
-            position: absolute;
-            content: "";
-            top: 35%;
-            right: vw(-19);
-            width: vw(5);
-            height: vw(5);
-            border: vw(2) solid $green;
-            border-top: none;
-            border-left: none;
-            transform: rotate(45deg);
-        }
-        @include mobile(578px){
-            margin-right: vw(72);
-            &::before{
-                right: vmin(-19);
-                width: vmin(5);
-                height: vmin(5);
-                border: vmin(2) solid $green;
-            }
-        }
+        display: none;
     }
     &__label{
         display: flex;
@@ -107,6 +84,10 @@
         &::before{
             position: absolute;
             content: "";
+            width: vw(1);
+            height: vw(20);
+            background: #D1d1d1;
+            left: vw(-7);
         }
         @include mobile(578px){
             max-height: vmin(19);
@@ -138,6 +119,37 @@
         @include mobile(578px){
             width: vmin(24);
             height: vmin(24);
+        }
+    }
+    &__title{
+        margin-right: vw(72);
+        cursor: pointer;
+        position: relative;
+        font-weight: bold;
+        font-size: vw(15);
+        line-height: vw(22);
+        @include mobile(578px){
+            font-size: vmin(15);
+            line-height: vmin(22);
+            margin-right: vw(72);
+            &::before{
+                right: vmin(-19);
+                width: vmin(5);
+                height: vmin(5);
+                border: vmin(2) solid $green;
+            }
+        }
+        &::before{
+            position: absolute;
+            content: "";
+            top: 35%;
+            right: vw(-19);
+            width: vw(5);
+            height: vw(5);
+            border: vw(2) solid $green;
+            border-top: none;
+            border-left: none;
+            transform: rotate(45deg);
         }
     }
 }

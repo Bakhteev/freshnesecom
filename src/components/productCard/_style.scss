@@ -1,6 +1,5 @@
 .item{
     margin-right: vw(32);
-    // min-width: vw(268);
     &:last-child{
         margin-right: 0;
     }
@@ -8,6 +7,7 @@
         margin-bottom: vmin(20);
     }
     &__content{
+        box-shadow: 0 0 vw(10) 0 rgba(0, 0, 0, 0.25);
         position: relative;
         box-sizing: border-box;
         padding: vw(16);

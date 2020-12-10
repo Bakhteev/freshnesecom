@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import classNames from 'classnames';
+
 
 const HeaderBottom = () => {
     const [categoties, setCategoties] = useState(false)
@@ -28,6 +28,7 @@ const HeaderBottom = () => {
                 </a>
             </div>
             <div className="header__search flex">
+                <h3 className="header__title">All categories</h3>
                 <ul 
                 onClick={() => handleCategoriesClick()}
                     className={`header__categoties categories ${categoties === true ? 'active' : ''} `}

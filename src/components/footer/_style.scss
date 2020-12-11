@@ -1,20 +1,40 @@
 .footer{
+    @include mobile(578px){
+        text-align: center;
+        .col-3{
+            width: 50%;
+        }
+    }
     &__top{
         padding: vw(64) vw(45) vw(48) vw(45);
+        @include mobile(578px){
+            padding: vmin(64) vmin(45) vmin(48) vmin(45);
+        }
     }
     &__bottom{
         padding: 0 vw(45) vw(48) vw(45);
+        @include mobile(578px){
+            padding: 0 vmin(45) vmin(48) vmin(45);
+        }
     }
     &__title{
         margin-bottom: vw(16);
         font-weight: 600;
         font-size: vw(18);
         line-height: vw(27);
+        @include mobile(578px){
+            margin-bottom: vmin(16);
+            font-size: vmin(18);
+            line-height: vmin(27);
+        }
     }
     &__item{
         margin-bottom: vw(16);
         &:last-child{
             margin-bottom: 0;
+        }
+        @include mobile(578px){
+            margin-bottom: vmin(16);
         }
     }
     &__link{
@@ -30,6 +50,13 @@
         &:hover{
             background: $green;
             color: $light-gray;
+        }
+        @include mobile(578px){
+            border-radius: vmin(12);
+            padding: vmin(4) vmin(10);
+            font-size: vmin(12);
+            line-height: vmin(18);
+            margin: 0 vmin(16) vmin(16) 0;
         }
     }
 }

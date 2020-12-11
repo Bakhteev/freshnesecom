@@ -1,10 +1,11 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+import { categories } from './const'
 
 
 const HeaderBottom = () => {
     const [categoties, setCategoties] = useState(false)
 
-    const handleCategoriesClick = () =>{
+    const handleCategoriesClick = () => {
         setCategoties(categoties ? false : true)
     }
     return (
@@ -28,17 +29,27 @@ const HeaderBottom = () => {
                 </a>
             </div>
             <div className="header__search flex">
-                <h3 className="header__title">All categories</h3>
-                <ul 
-                onClick={() => handleCategoriesClick()}
-                    className={`header__categoties categories ${categoties === true ? 'active' : ''} `}
-                >
-                    <li className="categoties__item">
-                        All categories
-                    </li>
-                </ul>
+                <h3
+                    onClick={() => handleCategoriesClick()}
+                    className={`header__title ${categoties === true ? 'active' : ''}`}>
+                    All categories
+                    <ul
+
+                        className={`header__categories categories ${categoties === true ? 'active' : ''} `}
+                    >
+
+                        {categories.map(item => {
+                            return (
+                                <li className="categories__item">
+                                    {item}
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </h3>
+
                 <label className="header__label label" htmlFor="search">
-                    <input id="search" className="header__input" type="text" placeholder="Search Products, categories ..."/>
+                    <input id="search" className="header__input" type="text" placeholder="Search Products, categories ..." />
                     <svg className="label__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.19303 11.4333C11.7704 11.4333 13.8597 9.34394 13.8597 6.76661C13.8597 4.18928 11.7704 2.09995 9.19303 2.09995C6.61571 2.09995 4.52637 4.18928 4.52637 6.76661C4.52637 9.34394 6.61571 11.4333 9.19303 11.4333Z" stroke="#151515" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
                         <path d="M5.81319 10.24L2.68652 13.3667" stroke="#151515" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />

@@ -4,7 +4,7 @@ import { menuText } from './const'
 const Menu = () => {
     const [dropdown, setDropdown] = useState()
     const handleClick = (index) => {
-        setDropdown(index)
+        setDropdown(dropdown === index ? '' : index)
     };
     return (
         <section className="menu">

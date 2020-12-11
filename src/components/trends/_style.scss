@@ -1,8 +1,8 @@
 .trends{
     &__row{
-        padding: vw(102) vw(45) vw(66) vw(45);
+        padding: vw(64) vw(45) vw(66) vw(45);
         @include mobile(578px){
-            padding: vmin(102) vmin(45) vmin(66) vmin(45);
+            padding: vmin(64) vmin(45) vmin(66) vmin(40);
         }
     }
     &__items{
@@ -15,11 +15,16 @@
         background-size: cover;
         box-sizing: border-box;
         padding: vw(48) 0 vw(32) vw(33);
-        min-width: vw(420);
         margin-right: vw(32);
         border-radius: vw(12);
         &:last-child{
             margin-right: 0;
+        }
+        @include mobile(578px){
+            padding: vmin(48) 0 vmin(32) vmin(33);
+            margin-right: 0;
+            margin-bottom: vmin(10);
+            border-radius: vmin(12);
         }
     }
     &__suptitle{
@@ -37,6 +42,11 @@
         font-size: vw(22);
         line-height: vw(33);
         margin: vw(10) 0 vw(94) 0;
+        @include mobile(578px){
+            font-size: vmin(22);
+            line-height: vmin(33);
+            margin: vmin(10) 0 vmin(94) 0;
+        }
     }
     &__btn{
         font-weight: bold;
@@ -66,6 +76,19 @@
             background: $light-green;
             &::before{
                 border-color: $black;
+            }
+        }
+        @include mobile(578px){
+            font-size: vmin(15);
+            line-height: vmin(22);
+            padding: vmin(12) vmin(38) vmin(12) vmin(16);
+            border-width: vmin(2);
+            border-radius: vmin(12);
+            &::before{
+                right: vmin(22);
+                width: vmin(4);
+                height: vmin(4);
+                border-width: vmin(2) ;
             }
         }
     }

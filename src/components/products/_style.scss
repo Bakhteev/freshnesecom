@@ -6,13 +6,13 @@
         &--top{
             padding-bottom: vw(73);
             @include mobile(578px){
-                padding-bottom: vmin(73);
+                padding-bottom:0;
             }
         }
         &--bottom{
             padding: vw(64) 0 vw(73) 0;
             @include mobile(578px){
-                padding: vmin(64) 0 vmin(73) 0;
+                padding: 0;
             }
         }
     }

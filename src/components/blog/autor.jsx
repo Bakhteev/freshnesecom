@@ -1,12 +1,11 @@
 import React from 'react'
 
-const BlogAutor = ({ boolean, img, author, date }) => {
-    console.log(boolean)
-    if (boolean) {
+const BlogAutor = ({ id, img, author, date }) => {
+    if (id === 0) {
         return (
             <div className="blog-item__row flex">
-                <img src={img} alt="" className="blog__icon" />
-                <span className="blog__author blog__autor--light">{author}</span>
+                <img src={img} alt="avatar" className="blog__icon"/>
+                <span className="blog__author blog__author--light">{author}</span>
                 <span className="blog__date blog__date--light">{date}</span>
             </div>
         )

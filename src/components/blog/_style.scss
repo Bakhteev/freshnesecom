@@ -1,19 +1,39 @@
 .blog{
     &__content{
         padding: vw(69) vw(45);
+        @include mobile(578px){
+            padding: vmin(69) vmin(10);
+            padding-bottom: 0;
+        }
     }
     &__row{
         padding-right: vw(45);
+        @include mobile(578px){
+            padding-right: 0;
+            text-align: center;
+        }
     }
     &__item{
         box-sizing: border-box;
         padding-left: vw(32);
-
         &--big{
             border-radius: vw(12);
-            background: url(../../assets/blog/blog-1.png) no-repeat center;
+            background: url(../../assets/blog/blog-1.png) no-repeat center ;
+            background-color: rgba($color: $black, $alpha: 0.5) ;
             background-size: cover;
             padding: 0 vw(24) vw(24) vw(24);
+        }
+        @include mobile(578px){
+            padding-left: 0;
+            margin-bottom: 30px;
+            &--big{
+                padding: 0 vmin(24) vmin(24) vmin(24);
+                border-radius: vmin(12);
+            }
+            &:last-child{
+                display: flex;
+                justify-content: space-around;
+            }
         }
     }
     &__tag{
@@ -25,6 +45,13 @@
         color: $green;
         background: #F4F8EC;
         border-radius: vw(12);
+        @include mobile(578px){
+            margin: vmin(24) 0 vmin(8) 0 ;
+            padding: 0 vmin(8);
+            font-size: vmin(12);
+            line-height: vmin(18);
+            border-radius: vmin(12);
+        }
     }
     &__title{
         font-weight: 600;
@@ -33,6 +60,13 @@
         &--light{
             margin-top: vw(228);
             color: $white;
+        }
+        @include mobile(578px){
+            font-size: vmin(22);
+            line-height: vmin(33);
+            &--light{
+                margin-top: vmin(228);
+            }
         }
     }
     &__img{
@@ -45,22 +79,46 @@
             height: auto;
             margin-bottom: 0;
         }
+        @include mobile(578px){
+            width: vmin(98);
+            height: vmin(98);
+            border-radius: vmin(12);
+            margin-bottom: vmin(32);
+            &--big{
+                width: 100%;
+                height: auto;
+                margin-bottom: 0;
+            }
+        }
     }
     &__description{
         margin-bottom: vw(8);
         font-weight: 500;
         font-size: vw(15);
         line-height: vw(22);
+        @include mobile(578px){
+            margin-bottom: vmin(8);
+            font-size: vmin(15);
+            line-height: vmin(22);
+        }
     }
     &__icon{
         margin-right: vw(8);
         width: vw(48);
         height: vw(48);
+        @include mobile(578px){
+            margin-right: vmin(8);
+            width: vmin(48);
+            height: vmin(48);
+        }
     }
     &__author{
-        margin-right:vw(16);
+        margin-right: vw(16);
         &--light{
             color: $white;
+        }
+        @include mobile(578px){
+           margin-right: vmin(16);
         }
     }
     &__author,
@@ -69,6 +127,10 @@
         font-weight: normal;
         font-size: vw(12);
         line-height: vw(16);
+        @include mobile(578px){
+            font-size: vmin(12);
+            line-height: vmin(16);
+        }
     }
     &__date{
         &--light{
@@ -81,12 +143,22 @@
     &__row{
         margin-top: vw(8);
         align-items: center;
+        @include mobile(578px){
+            margin-top: vmin(8);
+            justify-content: center;
+        }
     }
     &__inner:not(:last-child){
         margin-bottom: vw(50);
+        @include mobile(578px){
+            margin-bottom: vmin(50);
+        }
     }
+    
 }
-
 .mb-8{
     margin-bottom: vw(8);
+    @include mobile(578px){
+        margin-bottom: vmin(8);
+    }
 }

@@ -1,0 +1,1 @@
+export const categories = ['All categories', 'All categories', 'All categories']

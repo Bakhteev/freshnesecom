@@ -3,10 +3,18 @@
     align-items: center;
     margin-bottom: vw(42);
     padding-right: vw(30);
+    @include mobile(578px){
+        margin-bottom: vmin(42);
+        padding-right: vmin(30);
+    }
     &__title{
         font-weight: 600;
         font-size: vw(18);
         line-height: vw(27);
+        @include mobile(578px){
+            font-size: vmin(18);
+            line-height: vmin(27);
+        }
     }
     &__btn{
         position: relative;
@@ -27,6 +35,19 @@
             border-top: none;
             border-left: none;
             transform: translateY(-14%) rotate(-45deg);
+        }
+        @include mobile(578px){
+            font-size: vmin(15);
+            line-height: vmin(22);
+            padding: vmin(6) vmin(2);
+            border-radius: vmin(12);
+            &::before{
+                top: 45%;
+                right: vmin(-14);
+                width: vmin(4);
+                height: vmin(4);
+                border-width: vmin(2) ;
+            }
         }
     }
 }

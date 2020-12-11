@@ -32,19 +32,12 @@
     &__list{
     display: none;
     position: absolute;
+    left: vw(-7);
         &.active{
             display: block;
             z-index: 1;
             .menu__item{
                 animation: fading 0.3s forwards;
-				@keyframes fading {
-					from {
-						height: 0;
-					}
-					to {
-						height: vw(20);
-					}
-				}
             }
         }
     }

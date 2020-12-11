@@ -7,8 +7,8 @@ import SectionHeader from '../section-header';
 import ItemSalat from './blogItemSalat'
 import { salatArr } from './const';
 import {authorArr} from './const';
-import BlogAutor from './blogItemSalat';
-
+import BlogAutor from './autor';
+// id = { 0} author = { 'Author'} date = { "1.01.2020"}
 const Blog = () => {
     return (
         <section className="blog">
@@ -19,7 +19,8 @@ const Blog = () => {
                         <div className="col-5 blog__item blog__item--big blog-item">
                             <span className="blog__tag">Dinner tips</span>
                             <h2 className="blog__title blog__title--light">Our chef tips for a great and tasty dinner ready in 20 minutes</h2>
-                            {authorArr.map((item, index) => (index < 1 ? <BlogAutor {...item} />: ''))}
+                            {authorArr.map((item, index) =>( index > 0 ? '' : <BlogAutor {...item}  /> ))}
+                            
                         </div>
                         <div className="col-3 blog__item blog-item">
                             <img src={blogImg} alt="" className="blog__img blog__img--big" />

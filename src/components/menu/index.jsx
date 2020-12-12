@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { menuText } from './const'
+import {Link} from 'react-router-dom'
 
 const Menu = () => {
     const [dropdown, setDropdown] = useState()
@@ -22,7 +23,7 @@ const Menu = () => {
                                         return (
                                             <li
                                                 className="menu__item">
-                                                <a href="#" className="menu__link">{item}</a>
+                                                <Link to="/froots" className="menu__link">{item}</Link>
                                             </li>
                                         )
                                     })}

@@ -1,6 +1,8 @@
 import React from 'react'
 import HeaderTop from './headerTop';
 import HeaderBottom from './headerBottom';
+import Menu from '../menu';
+import Navigation from '../navigation';
 
 const Header = () => {
     return (
@@ -11,7 +13,10 @@ const Header = () => {
                     <HeaderBottom />
                 </div>
             </div>
+            <Menu />
+            <Navigation />
         </header>
+        
     )
 }
 

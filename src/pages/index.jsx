@@ -7,13 +7,13 @@ import Blog from "../components/blog";
 
 const Home = () => {
     return (
-        <div className="home">
+        <main className="home">
             <Trends />
             <Products />
             <Comments />
             <Headline />
             <Blog />
-        </div>
+        </main>
         
     )
 }

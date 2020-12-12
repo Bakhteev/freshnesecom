@@ -22,7 +22,7 @@ const Menu = () => {
                                         return (
                                             <li
                                                 className="menu__item">
-                                                {item}
+                                                <a href="#" className="menu__link">{item}</a>
                                             </li>
                                         )
                                     })}

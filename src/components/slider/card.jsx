@@ -1,7 +1,7 @@
 import React from 'react';
 import { sliderContent } from './const';
-import SwiperCore, { Navigation, A11y } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation, A11y  } from 'swiper';
+import { Swiper, SwiperSlide,} from 'swiper/react';
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
@@ -18,6 +18,9 @@ const Card = () => {
                 initialSlide={1}
                 loop={true}
                 navigation
+                breakpoints={{578: {slidesPerView:1, spaceBetween: 60}}}
+
+                
             >
                 {sliderContent.map(item => {
                     return (

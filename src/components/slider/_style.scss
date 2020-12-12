@@ -1,12 +1,18 @@
 .comments{
     &__content{
         padding: vw(42) 0 vw(90) 0 ;
+        @include mobile(578px){
+            padding: vmin(42) 0 vmin(90) 0 ;
+        }
     }
 }
 .slider{
     &__item{
         box-sizing: border-box;
         width: vw(369);
+        @include mobile(578px){
+            width: vmin(369);
+        }
     }
     &__content{
         position: relative;
@@ -14,12 +20,21 @@
         border: vw(1) solid #F1F1F1;
         box-sizing: border-box;
         border-radius: vw(12);
+        @include mobile(578px){
+            padding: vmin(24) vmin(32) vmin(40) vmin(32);
+            border-width: vmin(1);
+            border-radius: vmin(12);
+        }
     }
     &__comment{
         font-weight: 500;
         font-size: vw(15);
         line-height: vw(22);
         text-align: center;
+        @include mobile(578px){
+            font-size: vmin(15);
+            line-height: vmin(22);
+        }
     }
     &__name{
         margin-top: vw(24);
@@ -29,6 +44,11 @@
         line-height: vw(18);
         text-align: center;
         color: #A9A9A9;
+        @include mobile(578px){
+            margin-top: vmin(24);
+            font-size: vmin(12);
+            line-height: vmin(18);
+        }
     }
     &__icon{
         position: absolute;
@@ -37,10 +57,18 @@
         transform: translateX(-50%);
         width: vw(48);
         height: vw(48);
+        @include mobile(578px){
+            bottom: vmin(-21);
+            width: vmin(48);
+            height: vmin(48);
+        }
     }
 }
 .swiper-container.swiper-container-initialized.swiper-container-horizontal{
     padding-left: vw(16) !important;
+    @include mobile(578px){
+        padding-left: 0;
+    }
 }
 .swiper-button-prev,
 .swiper-button-next{
@@ -60,6 +88,9 @@
     &:hover{
         background: $green;
     }
+    @include mobile(578px){
+        display: none !important;
+    }
 }
 .swiper-button-prev{
     padding: vw(17) vw(13);
@@ -76,7 +107,11 @@
 
 .padding45{
     padding: 0 vw(45);
+    @include mobile(578px){
+        padding: 0;
+    }
 }
+
 
 
 

@@ -15,17 +15,17 @@
         margin-right: vw(54);
         cursor: pointer;
         &::before{
-        position: absolute;
-        content: "";
-        top: vw(8);
-        right: vw(-12);
-        width: vw(4);
-        height: vw(4);
-        border: vw(2) solid $green;
-        border-top: none;
-        border-left: none;
-        transform: rotate(45deg);
-        transition: 0.3s;
+            position: absolute;
+            content: "";
+            top: vw(8);
+            right: vw(-12);
+            width: vw(4);
+            height: vw(4);
+            border: vw(2) solid $green;
+            border-top: none;
+            border-left: none;
+            transform: rotate(45deg);
+            transition: 0.3s;
         }
         &.active{
             &::before{

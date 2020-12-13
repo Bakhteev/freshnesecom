@@ -3,7 +3,7 @@ import './index.scss';
 import Header from './components/header';
 import Footer from "./components/footer";
 import Home from "./pages";
-import FrootAndVegetables from './pages/frootsAndVegetables';
+import FrootsAndVegetables from './pages/frootsAndVegetables';
 import { Route, Switch } from "react-router-dom";
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
       <Header />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/froot" component={FrootAndVegetables} />
+        <Route path="/froots" component={FrootsAndVegetables} />
       </Switch>
       <Footer />
     </div>

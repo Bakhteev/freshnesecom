@@ -1,5 +1,6 @@
 import React from 'react'
 import Catalog from '../components/catalog'
+import CatalogSidebar from '../components/catalogSidebar'
 
 const FrootsAndVegetables = () => {
     return (

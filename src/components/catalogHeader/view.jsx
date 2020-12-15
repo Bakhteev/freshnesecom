@@ -1,20 +1,19 @@
 import React from 'react'
 
-const View = ({ text, icon, counter }) => {
-    console.log(text)
+const View = (props) => {
     return (
         <React.Fragment>
             <button className="catalog-header__item">
-                <span>{text}</span>
-                {icon}
+                <span>{props.text}</span>
+                {props.icon}
             </button>
             <button className="catalog-header__item">
-                <span>{text}</span>
-                {icon}
+                <span>{props.text}</span>
+                {props.icon}
             </button>
             <button className="catalog-header__item catalog-header__item-counter">
-                <span>{text}</span>
-                <span>{counter}</span>
+                <span>{props.text}</span>
+                <span>{props.counter}</span>
             </button>
         </React.Fragment>
     )

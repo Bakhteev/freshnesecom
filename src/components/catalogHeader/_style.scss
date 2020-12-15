@@ -1,6 +1,7 @@
 .catalog-header{
+    padding: vw(16) vw(45) ;
     &__middle{
-        padding: vw(16) vw(45);
+        padding: vw(16) 0;
         align-items: center;
         user-select: none;
     }
@@ -199,5 +200,38 @@
         line-height: vw(18);
         border-radius: vw(12);
         border: vw(1.5) solid #d1d1d1;
+    }
+}
+.tags{
+    &__title{
+        font-weight: 600;
+        font-size: vw(12);
+        line-height: vw(18);
+        color: #A9A9A9;
+        margin-right: vw(20);
+    }
+    &__item{
+        position: relative;
+        font-weight: 600;
+        font-size: vw(12);
+        line-height: vw(18);
+        color: $green;
+        padding: 0 vw(24) 0 vw(8);
+        margin-right: vw(12);
+        background: #F4F8EC;
+        border-radius: vw(12);
+        cursor: pointer;
+        &:last-child{
+            margin-right: 0;
+        }
+        &::before{
+            position: absolute;
+            content: "+";
+            right: vw(8);
+            top: 0;
+            color: #C8DEB3;
+            transform: rotate(45deg);
+            font-size: vw(17);
+        }
     }
 }

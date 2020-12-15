@@ -1,0 +1,85 @@
+.catalog-sidebar{
+    box-sizing: border-box;
+    &__title{
+        font-weight: 600;
+        font-size: vw(18);
+        line-height: vw(27);
+        margin-bottom: vw(18);
+    }
+    &__item{
+        font-family: "Open Sans", sans-serif;
+        font-weight: normal;
+        font-size: vw(14);
+        line-height: vw(19);
+        margin-bottom: vw(12);
+        justify-content: space-between;
+    }
+    &__numder{
+        font-weight: 600;
+        font-size: vw(12);
+        line-height: vw(18);
+        color: $green;
+        background: #F4F8EC;
+        border-radius: vw(12);
+        padding: 0 vw(8);
+    }
+}
+.brands{
+    margin-bottom: vw(50);
+    &__input{
+        display: none;
+        &:checked{
+            +.brands__label{
+                &::before{
+                    background: url(../../assets/catalog/checkbox-checked.svg) no-repeat center;
+                }
+            }
+        }
+    }
+    &__item{
+        margin-left: vw(30);
+    }
+    &__label{
+        position: relative;
+        cursor: pointer;
+        &::before{
+            position: absolute;
+            content: "";
+            top: 0;
+            left: vw(-30);
+            background: url(../../assets/catalog/checkbox.svg) no-repeat center;
+            background-size: cover;
+            width: vw(20);
+            height: vw(20);
+        }
+    }
+}
+.rating{
+    &__input{
+        display: none;
+        &:checked{
+            +.rating__label{
+                &::before{
+                    background: url(../../assets/catalog/checkbox-checked.svg) no-repeat center;
+                }
+            }
+        }
+    }
+    &__item{
+        margin-left: vw(30);
+    }
+    &__label{
+        position: relative;
+        cursor: pointer;
+        &::before{
+            position: absolute;
+            content: "";
+            top: 0;
+            left: vw(-30);
+            background: url(../../assets/catalog/checkbox.svg) no-repeat center;
+            background-size: cover;
+            width: vw(20);
+            height: vw(20);
+        }
+    }
+}

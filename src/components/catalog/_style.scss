@@ -1,3 +1,8 @@
 .catalog{
-    
+    &__row{
+        padding: vw(64) vw(45) ;
+    }
+    &__sidebar{
+        padding-right: vw(32);
+    }
 }

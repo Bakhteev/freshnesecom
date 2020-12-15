@@ -104,12 +104,8 @@
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
-
 .padding45{
     padding: 0 vw(45);
-    @include mobile(578px){
-        padding: 0;
-    }
 }
 
 

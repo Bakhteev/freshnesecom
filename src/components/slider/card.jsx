@@ -12,13 +12,13 @@ const Card = () => {
     return (
         <div className="comments__slider slider">
             <Swiper
+                breakpoints={{ 578: { slidesPerView: 3, } }}
                 spaceBetween={32}
-                slidesPerView={3}
+                slidesPerView={1}
                 centeredSlides={true}
-                initialSlide={1}
+                initialSlide={3}
                 loop={true}
                 navigation
-                breakpoints={{578: {slidesPerView:1, spaceBetween: 60}}}
 
                 
             >

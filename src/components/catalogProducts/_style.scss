@@ -1,0 +1,124 @@
+.product{
+    width: 100%;
+    border: vw(1) solid #D1D1D1;
+    border-radius: vw(12);
+    &__img{
+        border-radius: vw(12);
+        max-width: 100%;
+    }
+    &__title{
+        font-weight: 600;
+        font-size: vw(18);
+        line-height: vw(27);
+    }
+    &__description{
+        font-family: "Open Sans", sans-serif;
+        font-weight: normal;
+        font-size: vw(12);
+        line-height: vw(16);
+        color: #575757
+    }
+    &__row{
+        padding: vw(27) 0 vw(36) 0;
+    }
+    &__feautures{
+        &:first-child{
+            margin-right: vw(-20);
+        }
+    }
+    &__item{
+        font-family: "Open Sans", sans-serif;
+        font-weight: normal;
+        font-size: vw(14);
+        line-height: vw(19);
+        color: #A9A9A9;
+        max-width: vw(237);
+    }
+    &__span{
+        display: inline;
+        width: 100%;
+    }
+    &__span--green{
+        color: $green;
+    }
+    &__col{
+        box-sizing: border-box;
+        padding-left: vw(32);
+        padding: vw(34) 0;
+        &:last-child{
+            padding-left: vw(96);
+        }
+    }
+    &__price{
+        font-weight: 600;
+        font-size: vw(18);
+        line-height: vw(27);
+        display:block;
+    }
+    &__prev-prise{
+        font-weight: 600;
+        font-size: vw(12);
+        line-height: vw(18);
+        text-decoration-line: line-through;
+        color: #A9A9A9;
+        display:block;
+    }
+    &__shipping{ 
+        font-family: "Open Sans", sans-serif;
+        font-weight: normal;
+        font-size: vw(12);
+        line-height: vw(18);
+        color: #A9A9A9;
+        display:block;
+        &--bold{
+            margin: vw(16) 0 0 0 ;
+            font-weight: 600;
+            font-family: "Poppins", sans-serif;
+        }
+    }
+    &__link{
+        margin: vw(26) 0 vw(12) 0;
+        font-weight: bold;
+        font-size: vw(15);
+        line-height: vw(22);
+        color: $white;
+        padding: vw(12) vw(38) vw(12) vw(16);
+        background: $green;
+        border: vw(2) solid #46760A;
+        border-radius: vw(12);
+        position: relative;
+        cursor: pointer;
+        &::before{
+            position: absolute;
+            content: "";
+            top: 50%;
+            right: vw(10);
+            width: vw(7);
+            height: vw(7);
+            border: vw(2) solid $white;
+            border-top: none;
+            border-left: none;
+            transform: rotate(-45deg) translateY(-50%);
+        }
+    }
+    &__btn{
+        background: #F5F5F5;
+        border-radius: vw(12);
+        padding: vw(7) vw(12);
+        display:block;
+        align-items: center;
+
+    }
+    &__wish{
+        margin-left: vw(9);
+        font-weight: bold;
+        font-size: vw(15);
+        line-height: vw(22);
+    }
+    &__icon{
+        box-sizing: border-box;
+        padding-top: vw(3);
+        width: vw(16);
+        height: vw(16) ;
+    }
+}

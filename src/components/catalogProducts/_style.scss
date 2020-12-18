@@ -2,6 +2,7 @@
     width: 100%;
     border: vw(1) solid #D1D1D1;
     border-radius: vw(12);
+    margin-bottom: vw(32);
     &__img{
         border-radius: vw(12);
         max-width: 100%;
@@ -16,8 +17,13 @@
         font-weight: normal;
         font-size: vw(12);
         line-height: vw(16);
-        color: #575757
+        color: #575757;
+        margin-bottom: vw(10);
     }
+    // svg{
+    //     width: vw(109);
+    //     height: vw(20);
+    // }
     &__row{
         padding: vw(27) 0 vw(36) 0;
     }

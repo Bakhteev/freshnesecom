@@ -1,5 +1,9 @@
 .catalog-header{
     padding: vw(16) vw(45) ;
+    &__top{
+        justify-content: space-between;
+        align-items: center;
+    }
     &__middle{
         padding: vw(16) 0;
         align-items: center;
@@ -7,6 +11,49 @@
     }
     &__item:not(:last-child){
         margin-right: vw(16);
+    }
+    &__title{
+        font-weight: 600;
+        font-size: vw(32);
+        line-height: vw(48);
+    }
+    &__btn{
+        margin-right: vw(24);
+        align-items: center;
+        cursor: pointer;
+        &:last-child{
+            margin-right: 0;
+            cursor: auto;
+        }
+    }
+    &__icon{
+        width: vw(16);
+        height: vw(16);
+        margin-right: vw(5);
+        stroke: #A9A9A9;
+        &.active{
+            stroke: $green;
+        }
+    }
+    &__text{
+        font-family: "Open Sans", sans-serif;
+        font-weight: normal;
+        font-size: vw(12);
+        line-height: vw(16);
+        color: #A9A9A9;
+        &.active{
+            color: $black;
+        }
+    }
+    &__number{
+        background: #F4F8EC;
+        border-radius: vw(12);
+        padding: 0 vw(8);
+        margin-right: vw(5);
+        font-weight: 600;
+        font-size: vw(12);
+        line-height: vw(18);
+        color: $green;
     }
 }
 .checkboxes__input,

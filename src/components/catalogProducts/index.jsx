@@ -1,25 +1,27 @@
 import React from 'react'
 
-const ProductCardList = () => {
+const ProductCardList = ({ img, icon , title, description, feautures, property, price, delivery, tag, discount}) => {
     return (
         <React.Fragment>
             <div className="product flex">
                 <div className="col-4">
                     <img 
-                        src="https://2smart.ru/wp-content/uploads/2018/09/8875386638_1712425859-e1536093381914.jpg" 
+                        src={img} 
                         alt=""
                         className="product__img"/>
                 </div>
                 <div className="col-4 product__col">
-                    <h3 className="produsct__title">Product title</h3>
-                    <p className="product__description">Space for a small product description </p>
-                    <img src="" alt="" className="product__rating"/>
+                    <h3 className="produsct__title">{title}</h3>
+                    <p className="product__description">{description}</p>
+                    {icon}
+                    {/* <img src="" alt="" className="product__rating"/> */}
                     <div className="product__row flex">
                         <ul className="col-6 product__feautures">
-                            <li className="product__item flex">Fresheness</li>
-                            <li className="product__item flex">Farm</li>
-                            <li className="product__item flex">Delivery</li>
-                            <li className="product__item flex">Stock</li>
+                            {feautures.map(item=>{
+                                return(
+                                    <li className="product__item flex">{item}</li>
+                                )
+                            })}
                         </ul>
                         <ul className="col-6 product__feautures">
                             <li className="product__item flex"><span className="product__span--green">New </span> (Extra fresh)</li>
@@ -30,10 +32,10 @@ const ProductCardList = () => {
                     </div>
                 </div>
                 <div className="col-4 product__col">
-                    <span className="product__price">36.99 USD</span>
-                    <span className="product__prev-prise">48.56</span>
+                    <span className="product__price">{price - (price / 100) * discount} USD</span>
+                    <span className="product__prev-prise">{price}</span>
                     <span className="product__shipping product__shipping--bold">Free Shipping</span>
-                    <span className="product__shipping">Delivery in 1 day</span>
+                    <span className="product__shipping">Delivery in {delivery} day</span>
                     <a className="product__link">Product Detail</a>
                     <button className="product__btn flex">
                         <svg className="product__icon" width="" height="" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">

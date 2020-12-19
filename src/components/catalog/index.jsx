@@ -17,8 +17,8 @@ const Catalog = () => {
                         <CatalogSidebar />
                     </div>
                     <div className="col-9 catalog__item row">
-                        {/* {catalogArr.map((item, index) =>( index < 5 ? <ProductCardList {...item} /> : ''))} */}
-                        {catalogArr.map((item, index) => (index < 9 ? <ProductCardGrid {...item} /> : ''))}
+                        {catalogArr.map((item, index) =>( index < 5 ? <ProductCardList {...item} /> : ''))}
+                        {/* {catalogArr.map((item, index) => (index < 9 ? <ProductCardGrid {...item} /> : ''))} */}
                     </div>
                     
                 </div>

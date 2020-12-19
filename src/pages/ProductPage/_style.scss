@@ -1,7 +1,168 @@
 .products-page{
+    &__buy{
+        &--top{
+            justify-content: space-between;
+        }
+    }
     &__img{
         max-width: 100%;
+        max-height: vw(436);
+        border-radius: vw(12);
+        margin-bottom: vw(32);
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__title{
+        font-weight: 600;
+        font-size: vw(32);
+        line-height: vw(45);
+    }
+    &__rating{
+        align-items: center;
+    }
+    &__stars{
+        max-width: vw(108);
+        max-height: vw(20);
+    }
+    &__customer{
+        font-family: "Open Sans", sans-serif;
+        font-weight: normal;
+        font-size: vw(12);
+        line-height: vw(16);
+        color: #A9A9A9;
+        margin-left: vw(10);
+    }
+    &__description{
+        margin: vw(40) 0;
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: vw(17);
+        line-height: vw(23);
+    }
+    &__prices{
+        display: inline-flex;
+        flex-direction: column;
+    }
+    &__price{
+        font-weight: 600;
+        font-size: vw(26);
+        line-height: vw(39);
+        color: $green;
+    }
+    &__prev-price{
+        font-weight: 600;
+        font-size: vw(12);
+        line-height: vw(18);
+        text-decoration-line: line-through;
+        color: #A9A9A9;
+    }
+    &__label{
+        padding: vw(14) vw(16);
+        background: #F9F9F9;
+        border: vw(1) solid #D1D1D1;
+        box-sizing: border-box;
         border-radius: vw(12);
     }
-    
+    &__input{
+        max-width: vw(30);
+        max-height: vw(20);
+        background: transparent;
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: vw(14);
+        line-height: vw(19);
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;  
+        }
+    }
+    &__select{
+        cursor: pointer;
+        font-family: "Poppins", sans-serif;
+        outline: none;
+        border: none;
+        background: transparent;
+        font-weight: 600;
+        font-size: vw(12);
+        line-height: vw(18);
+    }
+    &__btn{
+        &--green{
+            align-items: center;
+            background: $green;
+            border: vw(2) solid #46760A;
+            box-sizing: border-box;
+            border-radius: vw(12);
+            padding: vw(12) vw(16);
+            font-weight: bold;
+            font-size: vw(15);
+            line-height: vw(22);
+            color: $white;
+        } 
+    }
+}
+.tabs{
+    &__header{
+        border-bottom: vw(1) solid #F5F5F5;
+    }
+    &__tab{
+        font-weight: 600;
+        font-size: vw(18);
+        line-height: vw(27);
+        padding-bottom: vw(16);
+        position: relative;
+        margin-right: vw(91);
+        align-items: center;
+        cursor: pointer;
+        &:last-child{
+            margin-right: 0;
+        }
+        &::before{
+                position: absolute;
+                content: "";
+                bottom: 0;
+                // width: vw(168);
+                width: 150%;
+                height: vw(1);
+                background: transparent;
+            }
+        &.active{
+            &::before{
+                background: $green;
+            }
+        }
+    }
+    &__number{
+        font-weight: 600;
+        font-size: vw(12);
+        line-height: vw(18);
+        color: $green;
+        background: #F4F8EC;
+        border-radius: vw(12);
+        padding: 0 vw(8);
+        margin-left: vw(8);
+    }
+    &__item{
+        margin-top: vw(48);
+        &.disabled{
+            display: none;
+        }
+    }
+    &__title{
+        font-weight: 500;
+        font-size: vw(15);
+        line-height: vw(22);
+    }
+    &__description{
+        margin: vw(8) 0 vw(32);
+        font-family: "Open Sans", sans-serif;
+        font-weight: normal;
+        font-size: vw(14);
+        line-height: vw(19);
+
+    }
 }

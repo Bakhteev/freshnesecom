@@ -4,7 +4,7 @@ import Header from './components/header';
 import Footer from "./components/footer";
 import Home from "./pages";
 import FrootsAndVegetables from './pages/frootsAndVegetables';
-import ProductPage from './pages/ProductPage/Product';
+import ProductPage from './pages/ProductPage';
 import { Route, Switch } from "react-router-dom";
 
 const App = () => {

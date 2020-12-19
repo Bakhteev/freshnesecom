@@ -9,7 +9,7 @@ const ProductPage = () => {
     return (
         <div className="products-page">
             <div className="container">
-                <div className="products-page__row flex">
+                <div className="products-page__row flex padding45">
                     <div className="col-6">
                         {/* <span className="">discount</span>
                         <span className="">Free shiping</span> */}
@@ -19,8 +19,8 @@ const ProductPage = () => {
                     </div>
                     <div className="col-6">
                         <h1 className="products-page__title">Carrots from Tomissy Farm</h1>
-                        <div className="products-page__rating">
-                            <img src={rating} alt="" />
+                        <div className="products-page__rating flex">
+                            <img src={rating} alt="" className="products-page__stars"/>
                             <span className="products-page__customer">(1 customer review)</span>
                         </div>
                         <p className="products-page__description">Carrots from Tomissy Farm are one of the best on the market. Tomisso and his family are giving a full love to his Bio products. Tomisso’s carrots are growing on the fields naturally.</p>

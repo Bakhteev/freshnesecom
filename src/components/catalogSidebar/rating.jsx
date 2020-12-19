@@ -16,7 +16,7 @@ const Rating = () => {
                 </li>
                 <li className="catalog-sidebar__item rating__item">
                     <input type="checkbox" id="rating2" className="rating__input" />
-                    <label htmlFor="rating2" className="rating__label"><img src={stars4} alt=""/></label>
+                    <label htmlFor="rating2" className="rating__label"><img src={stars4} alt="" /></label>
                 </li>
                 <li className="catalog-sidebar__item rating__item">
                     <input type="checkbox" id="rating3" className="rating__input" />

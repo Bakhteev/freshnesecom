@@ -1,8 +1,9 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const ProductCardGrid = ({ img, icon, title, description, price, discount }) => {
     return (
-        <div className='col-4 products__item item product-grid'>
+        <Link to="/product" className='col-4 products__item item product-grid'>
             <div className='item__content'>
                 <span className={`item__discount ${discount !== 0 ? 'active' : ''}`}>- {discount} %</span>
                 <img
@@ -21,7 +22,7 @@ const ProductCardGrid = ({ img, icon, title, description, price, discount }) => 
                     <button className='item__btn'>Buy now</button>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 }
 

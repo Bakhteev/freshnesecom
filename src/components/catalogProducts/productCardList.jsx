@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const ProductCardList = ({ img, icon , title, description, feautures, property, price, delivery, tag, discount}) => {
     return (
         <React.Fragment>
-            <div className="product flex">
+            <Link to="/product" className="product flex">
                 <div className="col-4">
                     <img 
                         src={img} 
@@ -44,7 +45,7 @@ const ProductCardList = ({ img, icon , title, description, feautures, property, 
                         <span className="product__wish">Add to wish list</span>
                     </button>
                 </div>
-            </div>
+            </Link>
         </React.Fragment>
     )
 }

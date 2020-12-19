@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 const ProductCard = ({ img, discount, title, description, price, col }) => {
   // const [currentPrice, setPrice] = React.useState(price);
@@ -10,7 +11,7 @@ const ProductCard = ({ img, discount, title, description, price, col }) => {
   // };<input type='text' onChange={texthandler} placeholder='Напиши что - нибудь' />
   if (col === true){
     return (
-    <div className='col-3 products__item item'>
+    <Link to="/product" className='col-3 products__item item'>
       
       <div className='item__content'>
         <span className={`item__discount ${discount !== 0 ? 'active' : ''}`}>- {discount} %</span>
@@ -30,12 +31,12 @@ const ProductCard = ({ img, discount, title, description, price, col }) => {
           <button className='item__btn'>Buy now</button>
         </div>
       </div>
-    </div>
+    </Link>
   );
   }
   else{
     return (
-      <div className='col-4 products__item item'>
+      <Link to="/product" className='col-4 products__item item'>
 
         <div className='item__content'>
           <span className={`item__discount ${discount !== 0 ? 'active' : ''}`}>- {discount} %</span>
@@ -55,7 +56,7 @@ const ProductCard = ({ img, discount, title, description, price, col }) => {
             <button className='item__btn'>Buy now</button>
           </div>
         </div>
-      </div>
+      </Link>
     );
   }
   

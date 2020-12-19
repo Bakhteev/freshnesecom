@@ -16,8 +16,11 @@ const Navigation = () => {
                     <li className="navigation__item">
                         <NavLink activeClassName="activeLink" to="/froots" className="navigation__link">Froot and vegetables</NavLink>
                     </li>
+                    <li className="navigation__item">
+                        <NavLink activeClassName="activeLink" to="/product" className="navigation__link">Carrots from Tomissy Farm</NavLink>
+                    </li>
                     {/* <li className="navigation__item">
-                        <Link to="/froots">{title}</Link>
+                        <Link to="/product">Carrots from Tomissy Farm</Link>
                     </li> */}
                 </ul>
             </div>

@@ -17,6 +17,7 @@
         }
     }
     &__items{
+        margin: 0 vw(-16);
         @include mobile(578px){
             justify-content: center;
         }

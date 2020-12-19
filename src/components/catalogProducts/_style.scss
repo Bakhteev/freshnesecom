@@ -3,6 +3,9 @@
     border: vw(1) solid #D1D1D1;
     border-radius: vw(12);
     margin-bottom: vw(32);
+    &-grid{
+        margin-bottom: vw(48);
+    }
     &__img{
         border-radius: vw(12);
         max-width: 100%;

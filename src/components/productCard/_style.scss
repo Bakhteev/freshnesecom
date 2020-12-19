@@ -1,8 +1,6 @@
 .item{
-    margin-right: vw(32);
-    &:last-child{
-        margin-right: 0;
-    }
+    padding:0 vw(16);
+    box-sizing: border-box;
     @include mobile(578px){
         margin-bottom: vmin(20);
     }

@@ -1,6 +1,6 @@
 import React from 'react'
 import View from './view'
-import { viewArr} from './const'
+
 
 function CatalogHeaderTop() {
     return (

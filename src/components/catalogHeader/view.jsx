@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { frootArr } from './const'
+import { catalogArr} from '../catalog/const'
 
 const View = () => {
     const [active, setactive] = useState(true)
@@ -26,7 +26,7 @@ const View = () => {
                 </svg>
                 <span className={`catalog-header__text ${active === false ? 'active' : '' }`}>List view</span>
             </div>
-            <div className="catalog-header__btn"><span className="catalog-header__number">{frootArr.length}</span><span className="catalog-header__text">Products</span></div>
+            <div className="catalog-header__btn"><span className="catalog-header__number">{catalogArr.length}</span><span className="catalog-header__text">Products</span></div>
         </React.Fragment>
     )
 }

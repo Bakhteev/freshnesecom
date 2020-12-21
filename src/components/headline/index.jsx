@@ -8,7 +8,7 @@ const Headline = () => {
     <section className='headline'>
       <div className='container'>
         <div className='headline__content'>
-          <SectionHeader title='Section Headline' btn='Button' />
+          <SectionHeader title='Section Headline' btn='Button' class={""} />
           <div className='headline__row row'>
             {itemContent.map((item, index) => (index < 4 ? <ProductCard {...item} col={[true, true, true, true ]} /> : ''))}
           </div>

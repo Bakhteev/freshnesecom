@@ -1,15 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const ProductCardList = ({ img, icon , title, description, feautures, property, price, delivery, tag, discount}) => {
+const ProductCardList = ({ img, icon, title, description, feautures, property, price, delivery, tag, discount }) => {
     return (
         <React.Fragment>
             <Link to="/product" className="product flex">
                 <div className="col-4">
-                    <img 
-                        src={img} 
+                    <img
+                        src={img}
                         alt=""
-                        className="product__img"/>
+                        className="product__img"
+                    />
                 </div>
                 <div className="col-4 product__col">
                     <h3 className="produsct__title">{title}</h3>
@@ -18,8 +19,8 @@ const ProductCardList = ({ img, icon , title, description, feautures, property, 
                     {/* <img src="" alt="" className="product__rating"/> */}
                     <div className="product__row flex">
                         <ul className="col-6 product__feautures">
-                            {feautures.map(item=>{
-                                return(
+                            {feautures.map(item => {
+                                return (
                                     <li className="product__item flex">{item}</li>
                                 )
                             })}

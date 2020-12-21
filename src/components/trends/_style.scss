@@ -2,7 +2,7 @@
     &__row{
         padding: vw(64) vw(45) vw(66) vw(45);
         @include mobile(578px){
-            padding: vmin(64) vmin(45) vmin(66) vmin(40);
+            padding: vmin(64) vmin(45) vmin(33) vmin(40);
         }
     }
     &__items{

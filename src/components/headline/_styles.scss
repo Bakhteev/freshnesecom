@@ -1,9 +1,16 @@
 .headline{
     &__content{
         padding: vw(70) vw(45) ;
+        @include mobile(578px){
+            padding: vmin(35) vmin(10);
+        }
     }
     &__row{
-        justify-content: center;
+        margin: 0 vw(-16);
+        @include mobile(578px){
+            margin: 0;
+            padding: 0 vmin(35);
+        }
     }
 
 }

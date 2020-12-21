@@ -1,6 +1,9 @@
 .products{
     &__content{
         padding: vw(64) vw(45) vw(73) vw(45);
+        @include mobile(578px){
+            padding: vmin(32) vmin(45) vmin(36) vmin(45);
+        }
     }
     &__row{
         &--top{

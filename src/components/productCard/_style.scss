@@ -3,6 +3,7 @@
     box-sizing: border-box;
     @include mobile(578px){
         margin-bottom: vmin(20);
+        padding:0 vmin(16);
     }
     &__content{
         box-shadow: 0 0 vw(10) 0 rgba(0, 0, 0, 0.25);

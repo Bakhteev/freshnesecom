@@ -8,9 +8,7 @@ const Comments = () => {
         <section className="comments">
             <div className="container">
                 <div className="comments__content">
-                    <div className="padding45">
-                        <SectionHeader title="Our customers says" btn="Button" />
-                    </div>
+                    <SectionHeader title="Our customers says" btn="Button" class={"padding45"} />
                     <Card />
                 </div>
             </div>

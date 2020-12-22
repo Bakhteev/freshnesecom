@@ -2,8 +2,32 @@ import React from 'react';
 import Sidebar from '../sidebar';
 import ProductCard from '../productCard';
 import { itemContent } from '../productCard/const';
+import axios from 'axios';
+import { useDispatch, useSelector, connect } from 'react-redux';
+import setProducts from '../../redux/actions/product'
+
+// export const ProductsArr = () =>{
+//   const productArr = []
+//   return(
+//     React.useEffect(() =>{
+//       axios.get(`http://localhost:3000/database.json`).then(({ data }) => productArr(data.products))
+//     })
+//   )
+// } 
+
 
 const Products = () => {
+
+  const store = useSelector(({ product, filters }) => {
+    return {
+      items: product.items,
+    };
+  });
+
+  const dispatch = useDispatch()
+  React.useEffect(() => {
+    axios.get(`http://localhost:3000/database.json`).then(({ data }) => { dispatch(setProducts(data.products))} )
+  }, [])
   return (
     <section className='products'>
       <div className='container'>
@@ -17,7 +41,7 @@ const Products = () => {
               />
             </div>
             <div className='col-9 products__items row'>
-              {itemContent.map((item, index) => (index < 3 ? <ProductCard {...item} /> : ''))}
+              {store.items && store.items.map((item, index) => (index < 3 ? <ProductCard {...item} /> : ''))}
             </div>
           </div>
           <div className='products__row--bottom row'>
@@ -29,7 +53,7 @@ const Products = () => {
               />
             </div>
             <div className='col-9 products__items row'>
-              {itemContent.map((item, index) => (index < 3 ? <ProductCard {...item} /> : ''))}
+              {store.items && store.items.map((item, index) => (index < 3 ? <ProductCard {...item} /> : ''))}
             </div>
           </div>
         </div>
@@ -38,4 +62,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default connect()(Products);

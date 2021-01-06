@@ -23,22 +23,6 @@ const Rating = () => {
                     )
 
                 })}
-                {/* <li className="catalog-sidebar__item rating__item">
-                    <input type="checkbox" id="rating2" className="rating__input" />
-                    <label htmlFor="rating2" className="rating__label"><img src={stars4} alt="" /></label>
-                </li>
-                <li className="catalog-sidebar__item rating__item">
-                    <input type="checkbox" id="rating3" className="rating__input" />
-                    <label htmlFor="rating3" className="rating__label"><img src={stars3} alt="" /></label>
-                </li>
-                <li className="catalog-sidebar__item rating__item">
-                    <input type="checkbox" id="rating4" className="rating__input" />
-                    <label htmlFor="rating4" className="rating__label"><img src={stars2} alt="" /></label>
-                </li>
-                <li className="catalog-sidebar__item rating__item">
-                    <input type="checkbox" id="rating5" className="rating__input" />
-                    <label htmlFor="rating5" className="rating__label"><img src={stars1} alt="" /></label>
-                </li> */}
             </ul>
         </div>
     )

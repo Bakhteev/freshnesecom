@@ -11,10 +11,6 @@ const Category = () => {
                         <li className="catalog-sidebar__item flex">{item.name}<span className="catalog-sidebar__numder">{item.number}</span></li>
                     )
                 })}
-{/*                 
-                <li className="catalog-sidebar__item flex">Category name<span className="catalog-sidebar__numder">11</span></li>
-                <li className="catalog-sidebar__item flex">Category name<span className="catalog-sidebar__numder">45</span></li>
-                <li className="catalog-sidebar__item flex">Category name<span className="catalog-sidebar__numder">36</span></li> */}
             </ul>
         </div>
     )

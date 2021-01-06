@@ -197,26 +197,31 @@
     &__row{
         justify-content: space-between;
         width: 80%;
+        padding: vw(11) 0;
         &:first-child{
             border-bottom: vw(1) solid #EBEBEB;
         }
     }
     &__header{
-        width: 33.33%;
-        font-weight: 600;
-        font-size: vw(12);
-        line-height: vw(18);
         padding: vw(7) 0;
-        text-align: center;
+        border-bottom: vw(1) solid #EBEBEB;
+        .table__item{
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-size: vw(12);
+            line-height: vw(18);
+            margin-right: vw(28);
+            &:last-child{
+                margin: 0 0 0 vw(3);
+            }
+        }
     }
     &__item{
-        width: 33.33%;
         font-family: "Open Sans", sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: vw(14);
         line-height: vw(19);
         color: #575757;
-        text-align: center;
     }
 }

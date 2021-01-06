@@ -9,6 +9,9 @@
         align-items: center;
         user-select: none;
     }
+    &__view{
+        align-items: center;
+    }
     &__item:not(:last-child){
         margin-right: vw(16);
     }

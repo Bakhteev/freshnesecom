@@ -8,6 +8,7 @@ import { itemContent } from '../../components/productCard/const'
 import ProductCard from '../../components/productCard'
 import SectionHeader from '../../components/section-header'
 
+
 const ProductPage = () => {
     return (
         <div className="products-page">

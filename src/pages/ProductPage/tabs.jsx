@@ -5,7 +5,7 @@ const Tabs = () => {
 
     const [tab, setTab] = useState(0)
     const handleClick = (index) => {
-        setTab(tab === index ? '' : index)
+        setTab(index)
     };
     return (
         <div className="products-page__tabs tabs">

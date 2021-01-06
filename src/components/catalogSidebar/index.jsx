@@ -2,6 +2,7 @@ import React from 'react'
 import Brands from './brands'
 import Category from './category'
 import Rating from './rating'
+import Range from './range'
 
 const CatalogSidebar = () => {
     return (
@@ -9,6 +10,7 @@ const CatalogSidebar = () => {
            <Category />
            <Brands />
            <Rating />
+           <Range />
        </aside>
     )
 }

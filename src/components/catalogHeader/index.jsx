@@ -3,10 +3,11 @@ import CatalogTop from './catalogHeaderTop'
 import CatalogMiddle from './catalogHeaderMiddle'
 import CatalogBottom from './catalogHeaderBottom'
 
-const CatalogHeader = () => {
+const CatalogHeader = ({viewMode, store}) => {
+    console.log(viewMode)
     return (
         <div className="catalog__header catalog-header">
-            <CatalogTop />
+            <CatalogTop viewMode={viewMode} store={store}/>
             <CatalogMiddle />
             <CatalogBottom />
         </div>

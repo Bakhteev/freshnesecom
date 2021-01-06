@@ -12,7 +12,6 @@
             "category": 0,
             "rating": 5,
             "discount": 36,
-            "view": "grid",
             "delivery": 1
         },
         {
@@ -27,7 +26,6 @@
             "category": 0,
             "rating": 6,
             "discount": 36,
-            "view": "grid",
             "delivery": 1
         },
         {
@@ -42,7 +40,6 @@
             "category": 0,
             "rating": 3,
             "discount": 36,
-            "view": "grid",
             "delivery": 1
         },
         {
@@ -57,7 +54,6 @@
             "category": 0,
             "rating": 4,
             "discount": 36,
-            "view": "grid",
             "delivery": 1
         },
         {
@@ -72,7 +68,6 @@
             "category": 0,
             "rating": 4,
             "discount": 36,
-            "view": "grid",
             "delivery": 1
         },
         {
@@ -87,7 +82,6 @@
             "category": 0,
             "rating": 7,
             "discount": 36,
-            "view": "grid",
             "delivery": 1
         },
         {
@@ -102,7 +96,6 @@
             "category": 0,
             "rating": 5,
             "discount": 36,
-            "view": "grid",
             "delivery": 1
         },
         {
@@ -117,7 +110,6 @@
             "category": 0,
             "rating": 1,
             "discount": 36,
-            "view": "grid",
             "delivery": 1
         },
         {
@@ -132,7 +124,6 @@
             "category": 0,
             "rating": 2,
             "discount": 36,
-            "view": "grid",
             "delivery": 1
         },
         {
@@ -147,7 +138,6 @@
             "category": 0,
             "rating": 1,
             "discount": 36,
-            "view": "grid",
             "delivery": 1
         },
         {
@@ -162,7 +152,6 @@
             "category": 0,
             "rating": 3,
             "discount": 36,
-            "view": "grid",
             "delivery": 1
         },
         {
@@ -177,7 +166,6 @@
             "category": 0,
             "rating": 5,
             "discount": 36,
-            "view": "grid",
             "delivery": 1
         },
         {
@@ -192,7 +180,6 @@
             "category": 0,
             "rating": 4,
             "discount": 36,
-            "view": "grid",
             "delivery": 1
         }
     ]

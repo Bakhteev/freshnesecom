@@ -6,6 +6,7 @@ import Home from "./pages";
 import FrootsAndVegetables from './pages/frootsAndVegetables';
 import ProductPage from './pages/ProductPage';
 import { Route, Switch } from "react-router-dom";
+import { connect } from 'react-redux';
 
 const App = () => {
   return (
@@ -21,4 +22,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default connect()(App);

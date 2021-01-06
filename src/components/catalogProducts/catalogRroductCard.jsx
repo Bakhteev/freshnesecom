@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const CatalogRroductCard = ({ view, imgPrewiev, rating, title, descriptionSmall, price, discount, delivery, feautures }) => {
-    if (view == 'grid'){
+const CatalogRroductCard = ({ imgPrewiev, rating, title, descriptionSmall, price, discount, delivery, feautures,view2, property}) => {
+    if (view2 == 0){
         return (
             <Link to="/product" className='col-4 products__item item product-grid'>
                 <div className='item__content'>
@@ -52,10 +52,18 @@ const CatalogRroductCard = ({ view, imgPrewiev, rating, title, descriptionSmall,
                                 })}
                             </ul>
                             <ul className="col-6 product__feautures">
-                                <li className="product__item flex"><span className="product__span--green">New </span> (Extra fresh)</li>
-                                <li className="product__item flex">Grocery Tarm Fields</li>
-                                <li className="product__item flex">Europe</li>
-                                <li className="product__item flex"><span className="product__span--green">320 pcs</span></li>
+                                {property.map(item =>{
+                                    if(item.tag){
+                                        return(
+                                            <li className="product__item flex"><span className="product__span--green">{item.tagText}</span>{item.text}</li>
+                                        )
+                                    }
+                                    else{
+                                        return(
+                                            <li className="product__item flex">{item.text}</li>
+                                        )
+                                    }
+                                })}
                             </ul>
                         </div>
                     </div>

@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
-import { catalogArr } from '../catalog/const'
 
-const Pagination = () => {
-    const [actie, setActive] = useState(0)
+
+const Pagination = ({store}) => {
+    const [active, setActive] = useState(0)
     return (
         <div className="catalog__padination pagination flex padding45">
             <ul className="pagination__list flex">
@@ -14,7 +14,7 @@ const Pagination = () => {
             </ul>
             <button className="pagination__btn">Show more products</button>
             <div>
-                <span className="pagination__number">{catalogArr.length}</span>
+                <span className="pagination__number">{store.items.length}</span>
                 <span className="pagination__span pagination__span--right">Products</span>
             </div>
         </div>

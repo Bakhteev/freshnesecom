@@ -35,13 +35,12 @@ const HeaderBottom = () => {
                     className={`header__title ${categoties === true ? 'active' : ''}`}>
                     All categories
                     <ul
-
                         className={`header__categories categories ${categoties === true ? 'active' : ''} `}
                     >
 
                         {categories.map(item => {
                             return (
-                                <li className="categories__item">
+                                <li key={item} className="categories__item">
                                     {item}
                                 </li>
                             )

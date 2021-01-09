@@ -8,7 +8,7 @@ const Category = () => {
             <ul>
                 {category.map((item, index)=>{
                     return(
-                        <li className="catalog-sidebar__item flex">{item.name}<span className="catalog-sidebar__numder">{item.number}</span></li>
+                        <li key={item + index} className="catalog-sidebar__item flex">{item.name}<span className="catalog-sidebar__numder">{item.number}</span></li>
                     )
                 })}
             </ul>

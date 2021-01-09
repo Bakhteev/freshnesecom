@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { menuText } from './const'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Menu = () => {
     const [dropdown, setDropdown] = useState()
@@ -14,6 +14,7 @@ const Menu = () => {
                     {menuText.map((item, index) => {
                         return (
                             <h3
+                                key={item + index}
                                 onClick={() => handleClick(index)}
                                 className={`menu__title ${dropdown === index ? 'active' : ''}`}>
                                 {item.title}
@@ -22,6 +23,7 @@ const Menu = () => {
                                     {item.item.map(item => {
                                         return (
                                             <li
+                                                key={item}
                                                 className="menu__item">
                                                 <Link to="/froots" className="menu__link">{item}</Link>
                                             </li>

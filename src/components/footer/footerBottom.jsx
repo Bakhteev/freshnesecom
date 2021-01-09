@@ -8,7 +8,7 @@ const FooterBottom = () => {
             <div className="row">
                 {footerLinks.map(item => {
                     return (
-                        <a href={item.link} className="footer__link">{item.text}</a>
+                        <a key={item} href={item.link} className="footer__link">{item.text}</a>
                     )
                 })}
             </div>

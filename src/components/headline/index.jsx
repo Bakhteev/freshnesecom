@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductCard from '../productCard';
 import SectionHeader from '../section-header';
-import { itemContent } from '../productCard/const';
+// import { itemContent } from '../productCard/const';
 import { useSelector } from 'react-redux'
 
 const Headline = () => {

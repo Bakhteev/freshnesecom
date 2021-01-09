@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { catalogArr } from '../catalog/const';
+// import { catalogArr } from '../catalog/const';
 
 const View = ({ viewMode, store }) => {
   const [active, setActive] = useState(0);

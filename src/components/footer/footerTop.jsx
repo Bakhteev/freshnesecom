@@ -5,7 +5,7 @@ import { footerArr } from './const';
 const FooterTop = () => {
     return (
         <div className="footer__top row">
-            {footerArr.map((item, index) => (<FooterItem {...item} />))}
+            {footerArr.map((item, index) => (<FooterItem {...item} key={item + index} />))}
         </div>
     )
 }

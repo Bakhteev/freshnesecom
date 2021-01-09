@@ -1,8 +1,10 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 
-const Pagination = ({store}) => {
-    const [active, setActive] = useState(0)
+const Pagination = ({store, setShowMore, showMore}) => {
+    const handleClick = () =>{
+        setShowMore(showMore === 9 ? 15 : 9)
+    }
     return (
         <div className="catalog__padination pagination flex padding45">
             <ul className="pagination__list flex">
@@ -12,7 +14,7 @@ const Pagination = ({store}) => {
                 <li className="pagination__item">3</li>
                 <li className="pagination__item">4</li>
             </ul>
-            <button className="pagination__btn">Show more products</button>
+            <button onClick={() => handleClick()} className="pagination__btn">Show more products</button>
             <div>
                 <span className="pagination__number">{store.items.length}</span>
                 <span className="pagination__span pagination__span--right">Products</span>

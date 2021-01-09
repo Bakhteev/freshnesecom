@@ -6,7 +6,7 @@ import stars2 from '../../assets/catalog/stars2.svg'
 import stars1 from '../../assets/catalog/stars1.svg'
 
 const Rating = () => {
-
+    console.log(<input type="checkbox" className="rating__input" />)
     const images = [stars5, stars4, stars3, stars2, stars1]
     return (
         <div className="catalog-sidebar__rating rating">
@@ -14,7 +14,7 @@ const Rating = () => {
             <ul>
                 {images.map((item, index) => {
                     return (
-                        <li className="catalog-sidebar__item rating__item">
+                        <li key={item + index} className="catalog-sidebar__item rating__item">
                             <input type="checkbox" id={`rating ${index}`} className="rating__input" />
                             <label htmlFor={`rating ${index}`} className="rating__label">
                                 <img src={item} alt="" />

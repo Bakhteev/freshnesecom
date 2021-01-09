@@ -1,9 +1,9 @@
 import React from 'react';
 import Sidebar from '../sidebar';
 import ProductCard from '../productCard';
-import { itemContent } from '../productCard/const';
+// import { itemContent } from '../productCard/const';
 import axios from 'axios';
-import { useDispatch, useSelector, connect } from 'react-redux';
+import { useDispatch, useSelector} from 'react-redux';
 import setProducts from '../../redux/actions/product';
 
 // export const ProductsArr = () =>{
@@ -24,7 +24,7 @@ const Products = () => {
 
   const dispatch = useDispatch();
   React.useEffect(() => {
-    axios.get(`https://freshnesecom-9e871.web.app/database.json`).then(({ data }) => {
+    axios.get(`http://localhost:3000/database.json`).then(({ data }) => {
       dispatch(setProducts(data.products));
     });
   }, []);
@@ -55,7 +55,7 @@ const Products = () => {
             </div>
             <div className='col-9 products__items row'>
               {store.items &&
-                store.items.map((item, index) => (index < 3 ? <ProductCard {...item} /> : ''))}
+                store.items.map((item, index) => (index < 3 ? <ProductCard {...item} key={item + index} /> : ''))}
             </div>
           </div>
         </div>

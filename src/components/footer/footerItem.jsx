@@ -7,7 +7,7 @@ const FooterItem = ({ title, link, text }) => {
             <ul className="footer__list ">
                 {text.map(text=>{
                     return(
-                        <li className="footer__item"><a href={link} className="link">{text}</a></li>
+                        <li key={text} className="footer__item"><a href={link} className="link">{text}</a></li>
                     )
                 })}
             </ul>

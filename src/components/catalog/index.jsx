@@ -10,6 +10,7 @@ import CatalogRroductCard from '../catalogProducts/catalogRroductCard';
 
 const Catalog = () => {
   const [viewMode, setViewMode] = React.useState(0)
+  const [showMore, setShowMore] = React.useState(9)
   const store = useSelector(({ product, filters }) => {
     return {
       items: product.items,
@@ -17,9 +18,8 @@ const Catalog = () => {
   });
   const dispatch = useDispatch();
   React.useEffect(() => {
-    axios.get(`https://freshnesecom-9e871.web.app/database.json`).then(({ data }) => {
-      console.log(data.products)
-      // dispatch(setProducts(data.products));
+    axios.get(`http://localhost:3000/database.json`).then(({ data }) => {
+      dispatch(setProducts(data.products));
     });
   }, []);
   return (
@@ -32,12 +32,11 @@ const Catalog = () => {
           </div>
           <div className='col-9 catalog__item row'>
             {store.items &&
-              store.items.map((item, index) =>
-                index < 9 ? <CatalogRroductCard {...item} view2={viewMode} feautures={feautures} property={property} /> : '',
+              store.items.map((item, index) => index < showMore ? <CatalogRroductCard {...item} view2={viewMode} feautures={feautures} property={property} /> : '',
               )}
           </div>
         </div>
-        <Pagination store={store}/>
+        <Pagination store={store} showMore={showMore} setShowMore={setShowMore}/>
       </div>
     </section>
   );

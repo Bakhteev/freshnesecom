@@ -8,7 +8,7 @@ const Sidebar = ({ title, item, link }) => {
                 <ul className="sidebar__menu">
                 {item.map(item =>{
                     return(
-                    <li className="sidebar__item">
+                        <li key={item} className="sidebar__item">
                         <a href={link} className="link">
                             {item}
                         </a>

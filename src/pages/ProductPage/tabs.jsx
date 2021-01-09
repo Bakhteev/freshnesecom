@@ -13,12 +13,12 @@ const Tabs = () => {
                 {tabsHeader.map((item, index) => {
                     if (item.boolean) {
                         return (
-                            <li onClick={() => handleClick(index)} className={`tabs__tab flex ${tab === index ? 'active' : ''}`}>{item.text}<span className="tabs__number">{item.number}</span></li>
+                            <li key={item + index} onClick={() => handleClick(index)} className={`tabs__tab flex ${tab === index ? 'active' : ''}`}>{item.text}<span className="tabs__number">{item.number}</span></li>
                         )
                     }
                     else {
                         return (
-                            <li onClick={() => handleClick(index)} className={`tabs__tab flex ${tab === index ? 'active' : ''}`}>{item.text}</li>
+                            <li key={item + index} onClick={() => handleClick(index)} className={`tabs__tab flex ${tab === index ? 'active' : ''}`}>{item.text}</li>
                         )
                     }
                 })}

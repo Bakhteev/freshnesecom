@@ -19,18 +19,19 @@
         }
     }
     &__link{
+        display: none;
         font-family: "Open Sans", sans-serif;
         font-weight: normal;
         font-size: vw(12);
         line-height: vw(16);
         color: #A9A9A9;
+        &.activeLink{
+            display: inline;
+            color: $black;
+        }
         @include mobile(578px){
             font-size: vmin(12);
             line-height: vmin(16);
         }
     }
-}
-
-.activeLink{
-    color: $black;
 }

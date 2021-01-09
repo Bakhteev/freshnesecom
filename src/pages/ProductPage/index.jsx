@@ -17,7 +17,7 @@ const ProductPage = () => {
                     <div className="products-page__row products-page__row--top flex ">
                         <div className="col-6">
                             {/* <span className="">discount</span>
-                        <span className="">Free shiping</span> */}
+                            <span className="">Free shiping</span> */}
                             <img src="https://2smart.ru/wp-content/uploads/2018/09/8875386638_1712425859-e1536093381914.jpg" alt="" className="products-page__img" />
                             <img src="https://2smart.ru/wp-content/uploads/2018/09/8875386638_1712425859-e1536093381914.jpg" alt="" className="products-page__img" />
                             <img src="https://2smart.ru/wp-content/uploads/2018/09/8875386638_1712425859-e1536093381914.jpg" alt="" className="products-page__img" />
@@ -37,7 +37,7 @@ const ProductPage = () => {
                     </div>
                     <div className="products-page__row products-page__row--bottom">
                         <SectionHeader title={'Related products'} btn={'More products'} />
-                        {itemContent.map((item, index) => (index < 4 ? <ProductCard {...item} col={[true, true, true, true]} /> : ''))}
+                        {itemContent.map((item, index) => (index < 4 ? <ProductCard {...item} col={[true, true, true, true]} key={item + index} /> : ''))}
                     </div>
                 </div>
             </div>

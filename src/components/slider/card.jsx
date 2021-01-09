@@ -24,7 +24,7 @@ const Card = () => {
             >
                 {sliderContent.map(item => {
                     return (
-                        < SwiperSlide>
+                        < SwiperSlide key={item}>
                             <div className="col-3 slider__item">
                                 <div className="slider__content">
                                     <p className="slider__comment">{item.comment}</p>

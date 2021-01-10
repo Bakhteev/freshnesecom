@@ -6,6 +6,8 @@ import Headline from "../components/headline";
 import Blog from "../components/blog";
 
 const Home = ({store}) => {
+    // const filter = store.items.find((item)=>item.id === 0)
+    // console.log(filter)
     return (
         <main className="home">
             <Trends />

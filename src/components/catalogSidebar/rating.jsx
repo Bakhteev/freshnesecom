@@ -6,7 +6,7 @@ import stars2 from '../../assets/catalog/stars2.svg'
 import stars1 from '../../assets/catalog/stars1.svg'
 
 const Rating = () => {
-    console.log(<input type="checkbox" className="rating__input" />)
+    // console.log(<input type="checkbox" className="rating__input" />)
     const images = [stars5, stars4, stars3, stars2, stars1]
     return (
         <div className="catalog-sidebar__rating rating">

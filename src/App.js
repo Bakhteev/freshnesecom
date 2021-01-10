@@ -26,8 +26,8 @@ const App = () => {
     <div className="App">
       <Header />
       <Switch>
-        <Route exact path="/"><Home store={store}/></Route>
-        <Route path="/froots"><Catalog store={store}/></Route>
+        <Route exact path="/"><Home store={store} /></Route>
+        <Route path="/froots"><Catalog store={store} /></Route>
         <Route path="/product"><ProductPage store={store}/></Route>
       </Switch>
       <Footer />

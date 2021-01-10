@@ -3,19 +3,32 @@ import './index.scss';
 import Header from './components/header';
 import Footer from "./components/footer";
 import Home from "./pages";
-import FrootsAndVegetables from './pages/frootsAndVegetables';
 import ProductPage from './pages/ProductPage';
+import Catalog from './pages/catalog'
 import { Route, Switch } from "react-router-dom";
-import { connect } from 'react-redux';
+import {useDispatch, useSelector, connect } from 'react-redux';
+import axios from 'axios';
+import setProducts from './redux/actions/product';
 
 const App = () => {
+  const store = useSelector(({ product, filters }) => {
+    return {
+      items: product.items,
+    };
+  });
+  const dispatch = useDispatch();
+  React.useEffect(() => {
+    axios.get(`http://localhost:3000/database.json`).then(({ data }) => {
+      dispatch(setProducts(data.products));
+    });
+  }, []);
   return (
     <div className="App">
       <Header />
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/froots" component={FrootsAndVegetables} />
-        <Route path="/product" component={ProductPage}/>
+        <Route exact path="/"><Home store={store}/></Route>
+        <Route path="/froots"><Catalog store={store}/></Route>
+        <Route path="/product"><ProductPage store={store}/></Route>
       </Switch>
       <Footer />
     </div>

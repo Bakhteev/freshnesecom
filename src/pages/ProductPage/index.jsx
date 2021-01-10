@@ -7,9 +7,10 @@ import rating from '../../assets/catalog/stars4.svg';
 import { itemContent } from '../../components/productCard/const'
 import ProductCard from '../../components/productCard'
 import SectionHeader from '../../components/section-header'
+import { feautures } from './const.js'
 
 
-const ProductPage = () => {
+const ProductPage = ({ store }) => {
     return (
         <div className="products-page">
             <div className="container">
@@ -29,7 +30,14 @@ const ProductPage = () => {
                                 <span className="products-page__customer">(1 customer review)</span>
                             </div>
                             <p className="products-page__description">Carrots from Tomissy Farm are one of the best on the market. Tomisso and his family are giving a full love to his Bio products. Tomisso’s carrots are growing on the fields naturally.</p>
-                            <Feautures />
+                            <div className="row">
+                                <ul className="col-6 products-page__list">
+                                    {feautures.map((item, index) => index < 4 ? <Feautures {...item} /> : '')}
+                                </ul>
+                                <ul className="col-6 products-page__list">
+                                    {feautures.map((item, index) => index >= 4 ? <Feautures {...item} /> : '')}
+                                </ul>
+                            </div>
                             <Productbuy />
                             <Tabs />
                             <StructureTable />
@@ -37,7 +45,8 @@ const ProductPage = () => {
                     </div>
                     <div className="products-page__row products-page__row--bottom">
                         <SectionHeader title={'Related products'} btn={'More products'} />
-                        {itemContent.map((item, index) => (index < 4 ? <ProductCard {...item} col={[true, true, true, true]} key={item + index} /> : ''))}
+                        {store.items &&
+                            store.items.map((item, index) => (index < 4 ? <ProductCard {...item} col={[true, true, true, true]} key={item + index} /> : ''))}
                     </div>
                 </div>
             </div>

@@ -1,33 +1,8 @@
 import React from 'react';
 import Sidebar from '../sidebar';
 import ProductCard from '../productCard';
-// import { itemContent } from '../productCard/const';
-import axios from 'axios';
-import { useDispatch, useSelector} from 'react-redux';
-import setProducts from '../../redux/actions/product';
 
-// export const ProductsArr = () =>{
-//   const productArr = []
-//   return(
-//     React.useEffect(() =>{
-//       axios.get(`http://localhost:3000/database.json`).then(({ data }) => productArr(data.products))
-//     })
-//   )
-// }
-
-const Products = () => {
-  const store = useSelector(({ product, filters }) => {
-    return {
-      items: product.items,
-    };
-  });
-
-  const dispatch = useDispatch();
-  React.useEffect(() => {
-    axios.get(`http://localhost:3000/database.json`).then(({ data }) => {
-      dispatch(setProducts(data.products));
-    });
-  }, []);
+const Products = ({store}) => {
   return (
     <section className='products'>
       <div className='container'>

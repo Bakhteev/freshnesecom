@@ -5,11 +5,11 @@ import Comments from "../components/slider";
 import Headline from "../components/headline";
 import Blog from "../components/blog";
 
-const Home = () => {
+const Home = ({store}) => {
     return (
         <main className="home">
             <Trends />
-            <Products />
+            <Products store={store} />
             <Comments />
             <Headline />
             <Blog />

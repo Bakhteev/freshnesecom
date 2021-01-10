@@ -1,37 +1,15 @@
 import React from 'react'
 
-const Feautures = () => {
+const Feautures = ({ type, text, underlined, green }) => {
     return (
-        <div className="">
-            <div className="">
-                <ul className="product-page__list">
-                    <li className="product-page__item"></li>
-                    <li className="product-page__item"></li>
-                    <li className="product-page__item"></li>
-                    <li className="product-page__item"></li>
-                </ul>
-                <ul className="product-page__list">
-                    <li className="product-page__item"></li>
-                    <li className="product-page__item"></li>
-                    <li className="product-page__item"></li>
-                    <li className="product-page__item"></li>
-                </ul>
-            </div>
-            <div className="">
-                <ul className="product-page__list">
-                    <li className="product-page__item"></li>
-                    <li className="product-page__item"></li>
-                    <li className="product-page__item"></li>
-                    <li className="product-page__item"></li>
-                </ul>
-                <ul className="product-page__list">
-                    <li className="product-page__item"></li>
-                    <li className="product-page__item"></li>
-                    <li className="product-page__item"></li>
-                    <li className="product-page__item"></li>
-                </ul>
-            </div>
-        </div>
+        <li className="products-page__item flex">
+            <span className="col-6 products-page__item">{type}</span>
+            {
+                underlined ? <span className="col-6 products-page__item--underlined products-page__item--black">{text}</span> : <span className="col-6 products-page__item--black">{text}</span>,
+                green ? <span className="col-6 products-page__item--green">{text}</span> : <span className="col-6 products-page__item--black">{text}</span>,
+                underlined && green ? <span className="col-6 products-page__item--underlined products-page__item--green">{text}</span> : <span className="col-6 products-page__item--black">{text}</span>
+            }
+        </li>
     )
 }
 

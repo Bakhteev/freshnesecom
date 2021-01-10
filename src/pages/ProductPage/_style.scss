@@ -1,15 +1,18 @@
-.products-page{
-    &__row{
-        &--top{
+.products-page {
+    &__row {
+        &--top {
             margin-bottom: vw(86);
         }
-        &--bottom{
+
+        &--bottom {
             padding-bottom: vw(73);
         }
     }
-    &__buy{
+
+    &__buy {
         margin-bottom: vw(70);
-        &--top{
+
+        &--top {
             justify-content: space-between;
             align-items: center;
             padding: vw(16) vw(24) vw(16) vw(16);
@@ -19,28 +22,34 @@
             margin-bottom: vw(30);
         }
     }
-    &__img{
+
+    &__img {
         max-width: 100%;
         max-height: vw(436);
         border-radius: vw(12);
         margin-bottom: vw(32);
-        &:last-child{
+
+        &:last-child {
             margin-bottom: 0;
         }
     }
-    &__title{
+
+    &__title {
         font-weight: 600;
         font-size: vw(32);
         line-height: vw(45);
     }
-    &__rating{
+
+    &__rating {
         align-items: center;
     }
-    &__stars{
+
+    &__stars {
         max-width: vw(108);
         max-height: vw(20);
     }
-    &__customer{
+
+    &__customer {
         font-family: "Open Sans", sans-serif;
         font-weight: normal;
         font-size: vw(12);
@@ -48,7 +57,8 @@
         color: #A9A9A9;
         margin-left: vw(10);
     }
-    &__description{
+
+    &__description {
         margin: vw(40) 0;
         font-family: "Open Sans", sans-serif;
         font-style: normal;
@@ -56,24 +66,65 @@
         font-size: vw(17);
         line-height: vw(23);
     }
-    &__prices{
+
+    &__list {
+        box-sizing: border-box;
+        padding-right: vw(70);
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    &__item {
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: vw(14);
+        line-height: vw(19);
+        white-space: nowrap;
+        color: #A9A9A9;
+        justify-content: space-between;
+        margin-bottom: vw(12);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &--underlined {
+            text-decoration: underline;
+        }
+
+        &--black {
+            color: $black;
+        }
+
+        &--green {
+            color: $green;
+        }
+    }
+
+    &__prices {
         display: inline-flex;
         flex-direction: column;
     }
-    &__price{
+
+    &__price {
         font-weight: 600;
         font-size: vw(26);
         line-height: vw(39);
         color: $green;
     }
-    &__prev-price{
+
+    &__prev-price {
         font-weight: 600;
         font-size: vw(12);
         line-height: vw(18);
         text-decoration-line: line-through;
         color: #A9A9A9;
     }
-    &__label{
+
+    &__label {
         align-items: center;
         padding: vw(14) vw(16);
         background: #F9F9F9;
@@ -82,7 +133,8 @@
         border-radius: vw(12);
         max-height: vw(48);
     }
-    &__input{
+
+    &__input {
         max-width: vw(30);
         max-height: vw(20);
         background: transparent;
@@ -92,13 +144,15 @@
         font-size: vw(14);
         line-height: vw(19);
         padding: 0;
+
         &::-webkit-outer-spin-button,
         &::-webkit-inner-spin-button {
             -webkit-appearance: none;
-            margin: 0;  
+            margin: 0;
         }
     }
-    &__select{
+
+    &__select {
         cursor: pointer;
         font-family: "Poppins", sans-serif;
         outline: none;
@@ -108,35 +162,40 @@
         font-size: vw(12);
         line-height: vw(18);
     }
-    &__btn{
-            align-items: center;
-            background: $green;
-            border: vw(2) solid #46760A;
-            box-sizing: border-box;
-            border-radius: vw(12);
-            padding: vw(12) vw(16);
-            font-weight: bold;
-            font-size: vw(15);
-            line-height: vw(22);
-            color: $white;
+
+    &__btn {
+        align-items: center;
+        background: $green;
+        border: vw(2) solid #46760A;
+        box-sizing: border-box;
+        border-radius: vw(12);
+        padding: vw(12) vw(16);
+        font-weight: bold;
+        font-size: vw(15);
+        line-height: vw(22);
+        color: $white;
     }
-    &__link{
+
+    &__link {
         margin-right: vw(42);
         display: inline-flex;
         align-items: center;
         font-weight: bold;
         font-size: vw(15);
         line-height: vw(22);
-        &:last-child{
+
+        &:last-child {
             margin-right: 0;
         }
     }
 }
-.tabs{
-    &__header{
+
+.tabs {
+    &__header {
         border-bottom: vw(1) solid #F5F5F5;
     }
-    &__tab{
+
+    &__tab {
         font-weight: 600;
         font-size: vw(18);
         line-height: vw(27);
@@ -145,24 +204,28 @@
         margin-right: vw(91);
         align-items: center;
         cursor: pointer;
-        &:last-child{
+
+        &:last-child {
             margin-right: 0;
         }
-        &::before{
-                position: absolute;
-                content: "";
-                bottom: 0;
-                width: 150%;
-                height: vw(1);
-                background: transparent;
-            }
-        &.active{
-            &::before{
+
+        &::before {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            width: 150%;
+            height: vw(1);
+            background: transparent;
+        }
+
+        &.active {
+            &::before {
                 background: $green;
             }
         }
     }
-    &__number{
+
+    &__number {
         font-weight: 600;
         font-size: vw(12);
         line-height: vw(18);
@@ -172,18 +235,22 @@
         padding: 0 vw(8);
         margin-left: vw(8);
     }
-    &__item{
+
+    &__item {
         margin-top: vw(48);
-        &.disabled{
+
+        &.disabled {
             display: none;
         }
     }
-    &__title{
+
+    &__title {
         font-weight: 500;
         font-size: vw(15);
         line-height: vw(22);
     }
-    &__description{
+
+    &__description {
         margin: vw(8) 0 vw(32);
         font-family: "Open Sans", sans-serif;
         font-weight: normal;
@@ -192,31 +259,38 @@
 
     }
 }
-.table{
+
+.table {
     width: 100%;
-    &__row{
+
+    &__row {
         justify-content: space-between;
         width: 80%;
         padding: vw(11) 0;
-        &:first-child{
+
+        &:first-child {
             border-bottom: vw(1) solid #EBEBEB;
         }
     }
-    &__header{
+
+    &__header {
         padding: vw(7) 0;
         border-bottom: vw(1) solid #EBEBEB;
-        .table__item{
+
+        .table__item {
             font-family: "Poppins", sans-serif;
             font-weight: 600;
             font-size: vw(12);
             line-height: vw(18);
             margin-right: vw(28);
-            &:last-child{
+
+            &:last-child {
                 margin: 0 0 0 vw(3);
             }
         }
     }
-    &__item{
+
+    &__item {
         font-family: "Open Sans", sans-serif;
         font-style: normal;
         font-weight: normal;

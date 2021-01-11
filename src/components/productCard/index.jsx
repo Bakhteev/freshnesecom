@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import ScrollToTop from '../../scrollToTop'
 
-const ProductCard = ({ imgPrewiev, discount, title, descriptionSmall, price, col }) => {
+const ProductCard = ({id, imgPrewiev, discount, title, descriptionSmall, price, col, setId }) => {
+  const putId = (id) => {
+    setId(id)
+  }
   // const [currentPrice, setPrice] = React.useState(price);
 
   // const texthandler = (event) => {
@@ -11,7 +15,8 @@ const ProductCard = ({ imgPrewiev, discount, title, descriptionSmall, price, col
   // };<input type='text' onChange={texthandler} placeholder='Напиши что - нибудь' />
   if (col) {
     return (
-      <Link to="/product" className='col-3 products__item item'>
+      <Link onClick={() => putId(id)} to="/product" className='col-3 products__item item'>
+        <ScrollToTop/>
         <div className='item__content'>
           <span className={`item__discount ${discount !== 0 ? 'active' : ''}`}>- {discount} %</span>
           <img
@@ -35,7 +40,7 @@ const ProductCard = ({ imgPrewiev, discount, title, descriptionSmall, price, col
   }
   else {
     return (
-      <Link to="/product" className='col-4 products__item item'>
+      <Link onClick={() => putId(id)} to="/product" className='col-4 products__item item'>
         <div className='item__content'>
           <span className={`item__discount ${discount !== 0 ? 'active' : ''}`}>- {discount} %</span>
           <img

@@ -132,6 +132,17 @@
         box-sizing: border-box;
         border-radius: vw(12);
         max-height: vw(48);
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: vw(13);
+            left: vw(35);
+            width: vw(1);
+            height: vw(20);
+            background: #D1D1D1;
+        }
     }
 
     &__input {

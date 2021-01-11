@@ -5,7 +5,7 @@ import Pagination from '../../components/pagination';
 import { feautures, property } from './const'
 import CatalogRroductCard from '../../components/catalogProducts/catalogRroductCard';
 
-const Catalog = ({store}) => {
+const Catalog = ({store, setId}) => {
   const [viewMode, setViewMode] = React.useState(0)
   const [showMore, setShowMore] = React.useState(9)
   return (
@@ -18,7 +18,7 @@ const Catalog = ({store}) => {
           </div>
           <div className='col-9 catalog__item row'>
             {store.items &&
-              store.items.map((item, index) => index < showMore ? <CatalogRroductCard {...item} view2={viewMode} feautures={feautures} property={property} /> : '',
+              store.items.map((item, index) => index < showMore ? <CatalogRroductCard {...item} view2={viewMode} feautures={feautures} property={property} setId={setId} /> : '',
               )}
           </div>
         </div>

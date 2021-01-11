@@ -3,7 +3,7 @@ export const property = [
     {
         text:'(Extra fresh)',
         tag: true,
-        tagText:'New ',
+        tagText:'New',
     },
     {
         text: 'Grocery Tarm Fields',

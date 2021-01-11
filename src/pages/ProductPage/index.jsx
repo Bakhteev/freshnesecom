@@ -10,7 +10,12 @@ import SectionHeader from '../../components/section-header'
 import { feautures } from './const.js'
 
 
-const ProductPage = ({ store }) => {
+const ProductPage = ({ store, id, setId }) => {
+    console.log(store)
+
+    const localStore = store.items.find((item) => item.id === id)
+
+    console.log(localStore)
     return (
         <div className="products-page">
             <div className="container">
@@ -19,9 +24,9 @@ const ProductPage = ({ store }) => {
                         <div className="col-6">
                             {/* <span className="">discount</span>
                             <span className="">Free shiping</span> */}
-                            <img src="https://2smart.ru/wp-content/uploads/2018/09/8875386638_1712425859-e1536093381914.jpg" alt="" className="products-page__img" />
-                            <img src="https://2smart.ru/wp-content/uploads/2018/09/8875386638_1712425859-e1536093381914.jpg" alt="" className="products-page__img" />
-                            <img src="https://2smart.ru/wp-content/uploads/2018/09/8875386638_1712425859-e1536093381914.jpg" alt="" className="products-page__img" />
+                            <img src={localStore.imgPrewiev} alt="" className="products-page__img" />
+                            <img src={localStore.imgMiddle} alt="" className="products-page__img" />
+                            <img src={localStore.imgBottom} alt="" className="products-page__img" />
                         </div>
                         <div className="col-6">
                             <h1 className="products-page__title">Carrots from Tomissy Farm</h1>
@@ -29,7 +34,7 @@ const ProductPage = ({ store }) => {
                                 <img src={rating} alt="" className="products-page__stars" />
                                 <span className="products-page__customer">(1 customer review)</span>
                             </div>
-                            <p className="products-page__description">Carrots from Tomissy Farm are one of the best on the market. Tomisso and his family are giving a full love to his Bio products. Tomisso’s carrots are growing on the fields naturally.</p>
+                            <p className="products-page__description">{localStore.description}</p>
                             <div className="row">
                                 <ul className="col-6 products-page__list">
                                     {feautures.map((item, index) => index < 4 ? <Feautures {...item} /> : '')}
@@ -38,7 +43,7 @@ const ProductPage = ({ store }) => {
                                     {feautures.map((item, index) => index >= 4 ? <Feautures {...item} /> : '')}
                                 </ul>
                             </div>
-                            <Productbuy />
+                            <Productbuy localStore={localStore} />
                             <Tabs />
                             <StructureTable />
                         </div>
@@ -46,7 +51,7 @@ const ProductPage = ({ store }) => {
                     <div className="products-page__row products-page__row--bottom">
                         <SectionHeader title={'Related products'} btn={'More products'} />
                         {store.items &&
-                            store.items.map((item, index) => (index < 4 ? <ProductCard {...item} col={[true, true, true, true]} key={item + index} /> : ''))}
+                            store.items.map((item, index) => (index < 4 ? <ProductCard {...item} col={[true, true, true, true]} key={item + index} setId={setId} /> : ''))}
                     </div>
                 </div>
             </div>

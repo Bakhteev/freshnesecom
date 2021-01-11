@@ -2,7 +2,7 @@ import React from 'react';
 import Sidebar from '../sidebar';
 import ProductCard from '../productCard';
 
-const Products = ({store}) => {
+const Products = ({store, setId}) => {
   return (
     <section className='products'>
       <div className='container'>
@@ -17,7 +17,7 @@ const Products = ({store}) => {
             </div>
             <div className='col-9 products__items row'>
               {store.items &&
-                store.items.map((item, index) => (index < 3 ? <ProductCard {...item} /> : ''))}
+                store.items.map((item, index) => (index < 3 ? <ProductCard {...item} setId={setId} key={item + index} /> : ''))}
             </div>
           </div>
           <div className='products__row--bottom row'>
@@ -30,7 +30,7 @@ const Products = ({store}) => {
             </div>
             <div className='col-9 products__items row'>
               {store.items &&
-                store.items.map((item, index) => (index < 3 ? <ProductCard {...item} key={item + index} /> : ''))}
+                store.items.map((item, index) => (index < 3 ? <ProductCard {...item} setId={setId} key={item + index} /> : ''))}
             </div>
           </div>
         </div>

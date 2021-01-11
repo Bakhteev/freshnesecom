@@ -1,10 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const CatalogRroductCard = ({ imgPrewiev, rating, title, descriptionSmall, price, discount, delivery, feautures,view2, property}) => {
+const CatalogRroductCard = ({ id, imgPrewiev, rating, title, descriptionSmall, price, discount, delivery, feautures,view2, property, setId}) => {
+    const putId = (id) =>{
+        setId(id)
+    }
     if (view2 === 0){
         return (
-            <Link to="/product" className='col-4 products__item item product-grid'>
+            <Link onClick={() => putId(id)} to="/product" className='col-4 products__item item product-grid'>
                 <div className='item__content'>
                     <span className={`item__discount ${discount !== 0 ? 'active' : ''}`}>- {discount} %</span>
                     <img

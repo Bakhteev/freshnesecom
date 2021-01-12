@@ -1,13 +1,13 @@
 import React from "react";
+import { Route, Switch } from "react-router-dom";
+import {useDispatch, useSelector, connect } from 'react-redux';
+import axios from 'axios';
 import './index.scss';
 import Header from './components/header';
 import Footer from "./components/footer";
 import Home from "./pages";
 import ProductPage from './pages/ProductPage';
 import Catalog from './pages/catalog'
-import { Route, Switch } from "react-router-dom";
-import {useDispatch, useSelector, connect } from 'react-redux';
-import axios from 'axios';
 import setProducts from './redux/actions/product';
 import ScrollToTop from "./scrollToTop";
 

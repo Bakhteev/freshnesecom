@@ -4,7 +4,7 @@ import Productbuy from './productbuy'
 import StructureTable from './structureTable'
 import Tabs from './tabs'
 import rating from '../../assets/catalog/stars4.svg';
-import { itemContent } from '../../components/productCard/const'
+// import { itemContent } from '../../components/productCard/const'
 import ProductCard from '../../components/productCard'
 import SectionHeader from '../../components/section-header'
 import { feautures } from './const.js'

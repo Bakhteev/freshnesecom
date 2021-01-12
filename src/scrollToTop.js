@@ -1,8 +1,7 @@
 const ScrollToTop = () => {
+  window.scrollTo(0, 0)
 
-    window.scrollTo(0, 0);
+  return null
+}
 
-    return null;
-};
-
-export default ScrollToTop;
+export default ScrollToTop

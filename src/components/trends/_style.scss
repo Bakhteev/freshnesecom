@@ -1,54 +1,54 @@
-.trends{
-    &__row{
+.trends {
+    &__row {
         padding: vw(64) vw(45) vw(66) vw(45);
-        @include mobile(578px){
+        @include mobile(578px) {
             padding: vmin(64) vmin(45) vmin(33) vmin(40);
         }
     }
-    &__items{
-        @include mobile(578px){
+    &__items {
+        @include mobile(578px) {
             justify-content: center;
         }
     }
-    &__item{
+    &__item {
         background: url(../../assets/trends/bc.png) no-repeat center;
         background-size: cover;
         box-sizing: border-box;
         padding: vw(48) 0 vw(32) vw(33);
         margin-right: vw(32);
         border-radius: vw(12);
-        &:last-child{
+        &:last-child {
             margin-right: 0;
         }
-        @include mobile(578px){
+        @include mobile(578px) {
             padding: vmin(48) 0 vmin(32) vmin(33);
             margin-right: 0;
             margin-bottom: vmin(10);
             border-radius: vmin(12);
         }
     }
-    &__suptitle{
+    &__suptitle {
         font-weight: 600;
         font-size: vw(12);
         line-height: vw(18);
         color: $green;
-        @include mobile(578px){
+        @include mobile(578px) {
             font-size: vmin(12);
             line-height: vmin(18);
         }
     }
-    &__title{
+    &__title {
         font-weight: 600;
         font-size: vw(22);
         line-height: vw(33);
         margin: vw(10) 0 vw(94) 0;
-        @include mobile(578px){
+        @include mobile(578px) {
             font-size: vmin(22);
             line-height: vmin(33);
             margin: vmin(10) 0 vmin(94) 0;
         }
     }
-    &__btn{
+    &__btn {
         font-weight: bold;
         font-size: vw(15);
         line-height: vw(22);
@@ -59,9 +59,9 @@
         border-radius: vw(12);
         position: relative;
         transition: 0.3s;
-        &::before{
+        &::before {
             position: absolute;
-            content: "";
+            content: '';
             top: 50%;
             right: vw(22);
             width: vw(4);
@@ -72,23 +72,23 @@
             transform: translateY(-14%) rotate(-45deg);
             transition: 0.3s;
         }
-        &:hover{
+        &:hover {
             background: $light-green;
-            &::before{
+            &::before {
                 border-color: $black;
             }
         }
-        @include mobile(578px){
+        @include mobile(578px) {
             font-size: vmin(15);
             line-height: vmin(22);
             padding: vmin(12) vmin(38) vmin(12) vmin(16);
             border-width: vmin(2);
             border-radius: vmin(12);
-            &::before{
+            &::before {
                 right: vmin(22);
                 width: vmin(4);
                 height: vmin(4);
-                border-width: vmin(2) ;
+                border-width: vmin(2);
             }
         }
     }

@@ -1,61 +1,61 @@
-.pagination{
-    align-items: center;
-    justify-content: space-between;
-    &__list{
-
+.pagination {
+  align-items: center;
+  justify-content: space-between;
+  &__item,
+  &__span {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: vw(12);
+    line-height: vw(16);
+    margin-right: vw(8);
+  }
+  &__item {
+    cursor: pointer;
+    &.active {
+      color: $green;
     }
-    &__item,
-    &__span{
-        font-family: "Open Sans", sans-serif;
-        font-weight: normal;
-        font-size: vw(12);
-        line-height: vw(16);
-        margin-right: vw(8);
+  }
+  &__span {
+    color: #a9a9a9;
+    &--right {
+      margin-right: 0;
     }
-    &__item{
-        cursor: pointer;
-        &.active{
-            color: $green;
-        }
+  }
+  &__btn {
+    background: $green;
+    border: vw(2) solid #46760a;
+    box-sizing: border-box;
+    border-radius: vw(12);
+    padding: vw(12) vw(38) vw(12) vw(16);
+    color: $white;
+    font-weight: bold;
+    font-size: vw(15);
+    line-height: vw(22);
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      top: 46%;
+      right: vw(13);
+      width: vw(6);
+      height: vw(6);
+      border: vw(2) solid $white;
+      border-top: none;
+      border-left: none;
+      transform: rotate(45deg) translateY(-50%);
     }
-    &__span{
-        color: #A9A9A9;
-        &--right{
-            margin-right: 0;
-        }
+    &.disabled{
+      opacity: 0.5;
     }
-    &__btn{
-        background: $green;
-        border: vw(2) solid #46760A;
-        box-sizing: border-box;
-        border-radius: vw(12);
-        padding: vw(12) vw(38) vw(12) vw(16);
-        color: $white;
-        font-weight: bold;
-        font-size: vw(15);
-        line-height: vw(22);
-        position: relative;
-       &::before{
-            position: absolute;
-            content: "";
-            top: 46%;
-            right: vw(13);
-            width: vw(6);
-            height: vw(6);
-            border: vw(2) solid $white;
-            border-top: none;
-            border-left: none;
-            transform: rotate(45deg) translateY(-50%);
-        }
-    }
-    &__number{
-        background: #F4F8EC;
-        border-radius: vw(12);
-        padding: 0 vw(8);
-        margin-right: vw(5);
-        font-weight: 600;
-        font-size: vw(12);
-        line-height: vw(18);
-        color: $green;
-    }
+  }
+  &__number {
+    background: #f4f8ec;
+    border-radius: vw(12);
+    padding: 0 vw(8);
+    margin-right: vw(5);
+    font-weight: 600;
+    font-size: vw(12);
+    line-height: vw(18);
+    color: $green;
+  }
 }

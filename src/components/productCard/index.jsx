@@ -50,7 +50,7 @@ const ProductCard = ({id, imgPrewiev, discount, title, descriptionSmall, price, 
           <h3 className='item__title'>{title}</h3>
           <p className='item__description'>{descriptionSmall}</p>
           <div className='item__row row'>
-            <div className='item__column flex'>
+			<div className='item__column flex'>
               <span className='item__price'>
                 {price ? Math.round(price - (price / 100) * discount) : '0'} USD
             </span>
